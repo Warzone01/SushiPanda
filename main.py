@@ -8,20 +8,16 @@ from kivy.lang import Builder
 from kivy.app import App
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.floatlayout import FloatLayout
 from kivy.core.window import Window
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition, NoTransition
-from kivy.core.image import Image
 #from kivy.graphics import BorderImage
-from kivy.graphics import Color, Rectangle
+
 #from kivy.uix.image import AsyncImage
-from kivy.uix.button import Button
 #from kivy.uix.label import Label
 from kivy.uix.scrollview import ScrollView
 # from kivymd.grid import SmartTile
 # from kivymd.theming import ThemeManager
 from kivy.properties import ObjectProperty
-from kivy.core.text import markup
 Window.clearcolor = (1,1,1,1)
 # Window.size = (720, 1280)
 
