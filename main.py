@@ -1,6 +1,7 @@
 #-*- coding: utf-8 -*-
 
 import kivy
+import kivymd
 kivy.require('1.10.0')
 from kivy.lang import Builder
 
@@ -25,39 +26,7 @@ Window.clearcolor = (1,1,1,1)
 # Window.size = (720, 1280)
 
 Imports = Builder.load_string('''
-#:import Toolbar kivymd.toolbar.Toolbar
-#:import ThemeManager kivymd.theming.ThemeManager
-#:import MDNavigationDrawer kivymd.navigationdrawer.MDNavigationDrawer
-#:import NavigationLayout kivymd.navigationdrawer.NavigationLayout
-#:import NavigationDrawerDivider kivymd.navigationdrawer.NavigationDrawerDivider
-#:import NavigationDrawerToolbar kivymd.navigationdrawer.NavigationDrawerToolbar
-#:import NavigationDrawerSubheader kivymd.navigationdrawer.NavigationDrawerSubheader
-#:import MDCheckbox kivymd.selectioncontrols.MDCheckbox
-#:import MDSwitch kivymd.selectioncontrols.MDSwitch
-#:import MDList kivymd.list.MDList
-#:import OneLineListItem kivymd.list.OneLineListItem
-#:import TwoLineListItem kivymd.list.TwoLineListItem
-#:import ThreeLineListItem kivymd.list.ThreeLineListItem
-#:import OneLineAvatarListItem kivymd.list.OneLineAvatarListItem
-#:import OneLineIconListItem kivymd.list.OneLineIconListItem
-#:import OneLineAvatarIconListItem kivymd.list.OneLineAvatarIconListItem
-#:import MDTextField kivymd.textfields.MDTextField
-#:import MDSpinner kivymd.spinner.MDSpinner
-#:import MDCard kivymd.card.MDCard
-#:import MDSeparator kivymd.card.MDSeparator
-#:import MDDropdownMenu kivymd.menu.MDDropdownMenu
-#:import get_color_from_hex kivy.utils.get_color_from_hex
-#:import colors kivymd.color_definitions.colors
 #:import SmartTile kivymd.grid.SmartTile
-#:import MDSlider kivymd.slider.MDSlider
-#:import MDTabbedPanel kivymd.tabs.MDTabbedPanel
-#:import MDTab kivymd.tabs.MDTab
-#:import MDProgressBar kivymd.progressbar.MDProgressBar
-#:import MDAccordion kivymd.accordion.MDAccordion
-#:import MDAccordionItem kivymd.accordion.MDAccordionItem
-#:import MDAccordionSubItem kivymd.accordion.MDAccordionSubItem
-#:import MDThemePicker kivymd.theme_picker.MDThemePicker
-#:import MDBottomNavigation kivymd.tabs.MDBottomNavigation
 #:import MDBottomNavigationItem kivymd.tabs.MDBottomNavigationItem
 ''')
 #Определение меню и action bar
