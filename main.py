@@ -17,12 +17,12 @@ from kivy.graphics import Color, Rectangle
 from kivy.uix.button import Button
 #from kivy.uix.label import Label
 from kivy.uix.scrollview import ScrollView
-from kivymd.grid import SmartTile
-from kivymd.theming import ThemeManager
+# from kivymd.grid import SmartTile
+# from kivymd.theming import ThemeManager
 from kivy.properties import ObjectProperty
 from kivy.core.text import markup
 Window.clearcolor = (1,1,1,1)
-Window.size = (720, 1280)
+# Window.size = (720, 1280)
 
 Imports = Builder.load_string('''
 #:import Toolbar kivymd.toolbar.Toolbar
