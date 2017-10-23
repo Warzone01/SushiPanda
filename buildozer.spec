@@ -36,25 +36,25 @@ version = 0.1
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = kivy, kivymd, python3crystax
+requirements = python3crystax, kivy, git+https://gitlab.com/kivymd/KivyMD.git
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
-# requirements.source.kivymd = ../kivymd
+#requirements.source.kivymd = ../kivymd
 
 # (list) Garden requirements
 #garden_requirements =
 
 # (str) Presplash of the application
-#presplash.filename = %(source.dir)s/data/presplash.png
+presplash.filename = Images/panda.png
 
 # (str) Icon of the application
 icon.filename = Images/panda.png
 
 # (str) Supported orientation (one of landscape, portrait or all)
 orientation = portrait
-
+x86
 # (list) List of service to declare
 #services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
 

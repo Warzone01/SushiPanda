@@ -13,7 +13,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition, NoTran
 from kivy.uix.scrollview import ScrollView
 from kivy.properties import ObjectProperty
 Window.clearcolor = (1,1,1,1)
-# Window.size = (720, 1280)
+#Window.size = (720, 1280)
 
 Imports = Builder.load_string('''
 #:import SmartTile kivymd.grid.SmartTile
@@ -22,33 +22,36 @@ Imports = Builder.load_string('''
 #Определение меню и action bar
 menu_head = '''
 <Menu>:
-    name: 'Menu'
-    BoxLayout:
-        orientation: 'vertical'
-        ActionBar:
-            background_color: (0, 5, 0, 0.8)
-            pos_hint: {'top':1}
-            ActionView:
-                use_sperator: True
-                ActionPrevious: 
-                    app_icon: 'Images/panda.png'
-                    title: 'Caffe Panda'
-                    with_previous: False
-                ActionOverflow:
-                ActionButton:
-                    icon: 'ico.png'
-                    on_release: root.manager.current = 'Cart'
+    Screen:
+        name: 'Menu'
+        BoxLayout:
+            orientation: 'vertical'
+            ActionBar:
+                background_color: (0, 5, 0, 0.8)
+                pos_hint: {'top':1}
+                ActionView:
+                    use_sperator: True
+                    ActionPrevious: 
+                        app_icon: 'Images/panda.png'
+                        title: 'Caffe Panda'
+                        with_previous: False
+                    ActionOverflow:
+                    ActionButton:
+                        icon: 'ico.png'
+                        on_release: root.manager.current = 'Cart'
 '''
 #Параметры кнопок
 menu_buttons_head = '''
-        ScrollView:
-            GridLayout:
-                orientation: 'vertical'
-                cols: 2
-                size_hint_y: None
-                height: 1300
-                padding: 7
-                spacing: 7
+            ScrollView:
+                GridLayout:
+                    cols: 1
+                    size: self.size
+                    size_hint_y: None
+                    row_default_height: (self.width - self.cols*self.spacing[0])/2
+                    row_force_default: False
+                    height: self.minimum_height
+                    padding: 3
+                    spacing: 3
 '''
 #Сами кнопки P.S. Кнопки прорисовываются в классе menu
 menu_buttons = ''
@@ -78,9 +81,11 @@ sushi_buttons_head = '''
         ScrollView:
             GridLayout:
                 orientation: 'vertical'
-                cols: 3
+                cols: 2
                 size_hint_y: None
-                height: 2250
+                row_default_height: (self.width - self.cols*self.spacing[0])/2
+                row_force_default: True
+                height: self.minimum_height
                 padding: 0
                 spacing: 0
 '''
@@ -110,7 +115,7 @@ Cart = Builder.load_string('''
                     text: 'Ваша корзина пуста'
                     color: (0, 0, 0, 0.5)
                     font_size: 30
-                    font_name: '10469'
+                    
 ''')
 chicago_roll_head = '''
 <Chicago_Roll>:
@@ -184,7 +189,7 @@ Manager = Builder.load_string('''
         
 ''')
 
-class Menu(ScrollView, Screen):
+class Menu(Screen):
     menu_buttons = ''
     img_list_menu = [
         {
@@ -245,19 +250,19 @@ class Menu(ScrollView, Screen):
         },
     ]
     templ = '''
-                SmartTileWithLabel:
-                    allow_stretch: True
-                    mipmap: False
-                    box_color: (1, 1, 1, 0)
-                    source: "{}"
-                    on_release: root.manager.current = '{}'
+                    SmartTileWithLabel:
+                        allow_stretch: True
+                        mipmap: False
+                        box_color: (1, 1, 1, 0)
+                        source: "{}"
+                        on_release: root.manager.current = '{}'
     '''
     for i in range(len(img_list_menu)):
         menu_buttons += templ.format(img_list_menu[i]['img'], img_list_menu[i]['lnk'])
     mm = menu_head + menu_buttons_head + menu_buttons
     Menu = Builder.load_string(mm)
 
-class Sushi(ScrollView, Screen):
+class Sushi(Screen):
     sushi_buttons = ''
     img_list_sushi = [
         {
@@ -414,7 +419,7 @@ class Sushi(ScrollView, Screen):
     ]
     templ = '''
                 SmartTileWithLabel:
-                    allow_stretch: True
+                    allow_stretch: False
                     mipmap: False
                     box_color: (1, 1, 1, 0.5)
                     source: "{}"
