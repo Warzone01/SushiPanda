@@ -63,7 +63,8 @@ x86
 #
 
 #
-# author = © Copyright Info
+# author = © Copyright Infoandroid.presplash_color = #FFFFFF
+
 
 # change the major version of python used by the app
 osx.python_version = 3
@@ -152,7 +153,7 @@ android.ndk_path = ../../crystax-ndk-10.3.2/
 
 # (str) OUYA Console category. Should be one of GAME or APP
 # If you leave this blank, OUYA support will not be enabled
-#android.ouya.category = GAME
+#android.ouya.category = APP
 
 # (str) Filename of OUYA Console icon. It must be a 732x412 png image.
 #android.ouya.icon.filename = %(source.dir)s/data/ouya_icon.png
@@ -211,6 +212,7 @@ p4a.force-build = True
 
 # (str) Path to a custom kivy-ios folder
 #ios.kivy_ios_dir = ../kivy-ios
+
 
 # (str) Name of the certificate to use for signing the debug version
 # Get a list of available identities: buildozer ios list_identities

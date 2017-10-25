@@ -90,7 +90,7 @@ sushi_buttons_head = '''
                 spacing: 0
 '''
 sushi_buttons = ''
-Cart = Builder.load_string('''
+cart_head = '''
 <Cart>:
     name: 'Cart'
     BoxLayout:
@@ -108,15 +108,21 @@ Cart = Builder.load_string('''
                 ActionOverflow:
                 ActionButton:
                     icon: 'ico.png'
-        
+'''
+cart_buttons_head = '''
         ScrollView:
             BoxLayout:
+'''
+
+cart_label = '''       
                 Label:
                     text: 'Ваша корзина пуста'
                     color: (0, 0, 0, 0.5)
                     font_size: 30
                     
-''')
+'''
+cart_shop = '[]'
+
 chicago_roll_head = '''
 <Chicago_Roll>:
     name: 'Chicago_Roll'
@@ -143,13 +149,17 @@ chicago_roll_info = '''
             size_hint_x: 1
             height: 1000
             orientation: 'vertical'
+'''
+chicago_button = '''
             SmartTileWithLabel:
                 allow_stretch: False
                 mipmap: False
                 box_color: (1, 1, 1, 0.5)
                 source: 'Images/Sushi/CicagoRoll.jpg'
                 text: 'Добавить в корзину'
-                on_release: root.manager.current = 'Chicago_Roll'
+                
+'''
+chicago_text = '''
         ScrollView:
             BoxLayout:
                 orientation: 'vertical'
@@ -423,7 +433,7 @@ class Sushi(Screen):
                     mipmap: False
                     box_color: (1, 1, 1, 0.5)
                     source: "{}"
-                    text: '{}' + '{}'
+                    text: '{}' + '\\n {}'
                     on_release: root.manager.current = '{}'
     '''
     for i in range(len(img_list_sushi)):
@@ -492,10 +502,17 @@ class Chicago_Roll(ScrollView, Screen):
                                            list_chicago[i]['size'],
                                            list_chicago[i]['col'],
                                            list_chicago[i]['font'])
-    cr = chicago_roll_head + chicago_roll_info + chicago_roll_label
+    cr = chicago_roll_head + chicago_roll_info + chicago_button + chicago_text + chicago_roll_label
     Chicago_Roll = Builder.load_string(cr) 
 class Cart(ScrollView, Screen):
-    pass
+    # cart_shop = '[]'
+    if cart_shop == '[]':
+        cart_shop = cart_label
+    # else:
+    #     for i in range(len(cart)):
+    #         cart_shop += cart.format(cart)
+    cart = cart_head + cart_buttons_head + cart_shop
+    Cart = Builder.load_string(cart)
 
 class Manager(ScreenManager):
     screen_menu = ObjectProperty(None)
