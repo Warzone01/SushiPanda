@@ -47,7 +47,7 @@ requirements = python3crystax, kivy, git+https://gitlab.com/kivymd/KivyMD.git
 #garden_requirements =
 
 # (str) Presplash of the application
-presplash.filename = Images/panda.png
+presplash.filename = Images/preload.png
 
 # (str) Icon of the application
 icon.filename = Images/panda.png

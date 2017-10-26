@@ -112,6 +112,7 @@ cart_head = '''
 cart_buttons_head = '''
         ScrollView:
             BoxLayout:
+                orientation: 'vertical'
 '''
 
 cart_label = '''       
@@ -121,8 +122,8 @@ cart_label = '''
                     font_size: 30
                     
 '''
-cart_shop = '[]'
 
+cart_shop = ''
 chicago_roll_head = '''
 <Chicago_Roll>:
     name: 'Chicago_Roll'
@@ -157,6 +158,7 @@ chicago_button = '''
                 box_color: (1, 1, 1, 0.5)
                 source: 'Images/Sushi/CicagoRoll.jpg'
                 text: 'Добавить в корзину'
+                on_press: cart_shop.append(chicago_button)
                 
 '''
 chicago_text = '''
