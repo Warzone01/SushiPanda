@@ -1,61 +1,27 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import kivy
-import kivymd
-kivy.require('1.10.0')
-from kivy.lang import Builder
 
+kivy.require('1.10.0')
+
+from kivy.lang import Builder
 from kivy.app import App
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.boxlayout import BoxLayout
 from kivy.core.window import Window
-from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition, NoTransition
+from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition, \
+    NoTransition
 from kivy.uix.scrollview import ScrollView
 from kivy.properties import ObjectProperty
-Window.clearcolor = (1,1,1,1)
-#Window.size = (720, 1280)
 
-Imports = Builder.load_string('''
+Window.clearcolor = (1, 1, 1, 1)
+# Window.size = (720, 1280)
+
+Builder.load_string('''
+#:kivy 1.10
 #:import SmartTile kivymd.grid.SmartTile
 #:import MDBottomNavigationItem kivymd.tabs.MDBottomNavigationItem
 ''')
-#Определение меню и action bar
-menu_head = '''
-<Menu>:
-    Screen:
-        name: 'Menu'
-        BoxLayout:
-            orientation: 'vertical'
-            ActionBar:
-                background_color: (0, 5, 0, 0.8)
-                pos_hint: {'top':1}
-                ActionView:
-                    use_sperator: True
-                    ActionPrevious: 
-                        app_icon: 'Images/panda.png'
-                        title: 'Caffe Panda'
-                        with_previous: False
-                    ActionOverflow:
-                    ActionButton:
-                        icon: 'ico.png'
-                        on_release: root.manager.current = 'Cart'
-'''
-#Параметры кнопок
-menu_buttons_head = '''
-            ScrollView:
-                GridLayout:
-                    cols: 1
-                    size: self.size
-                    size_hint_y: None
-                    row_default_height: (self.width - self.cols*self.spacing[0])/2
-                    row_force_default: False
-                    height: self.minimum_height
-                    padding: 3
-                    spacing: 3
-'''
-#Сами кнопки P.S. Кнопки прорисовываются в классе menu
-menu_buttons = ''
-#Меню суши
+
+# Меню суши
 sushi_head = '''
 <Sushi>:
     name: 'Sushi'
@@ -76,7 +42,8 @@ sushi_head = '''
                     icon: 'ico.png'
                     on_release: root.manager.current = 'Cart'
 '''
-#Настройки кнопок
+
+# Настройки кнопок
 sushi_buttons_head = '''
         ScrollView:
             GridLayout:
@@ -120,7 +87,7 @@ cart_label = '''
                     text: 'Ваша корзина пуста'
                     color: (0, 0, 0, 0.5)
                     font_size: 30
-                    
+
 '''
 
 cart_shop = ''
@@ -159,7 +126,7 @@ chicago_button = '''
                 source: 'Images/Sushi/CicagoRoll.jpg'
                 text: 'Добавить в корзину'
                 on_press: cart_shop.append(chicago_button)
-                
+
 '''
 chicago_text = '''
         ScrollView:
@@ -170,109 +137,6 @@ chicago_text = '''
 '''
 chicago_roll_label = ''
 
-Manager = Builder.load_string('''
-<Manager>:
-    id: screen_manager
-
-    screen_menu: Menu
-    screen_sushi: Sushi
-    screen_cart: Cart
-    screen_chicago_roll: Chicago_Roll
-
-    Menu:
-        id: Menu
-        name: 'Menu'
-        manager: screen_manager
-
-    Sushi:
-        id: Sushi
-        name: 'Sushi'
-        manager: screen_manager
-    
-    Cart:
-        id: Cart
-        name: 'Cart'
-        manager: screen_manager
-
-    Chicago_Roll:
-        id: Chicago_Roll
-        name: 'Chicago_Roll'
-        manager: screen_manager
-        
-''')
-
-class Menu(Screen):
-    menu_buttons = ''
-    img_list_menu = [
-        {
-            "img": 'Images/Menu/Candies.jpg',
-            "lnk": 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Garneir.jpg', 
-            'lnk': 'Sushi'
-        }, 
-        {
-            'img': 'Images/Menu/Homosakki.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Hot.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/MoreRolls.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Nigiri.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Packs.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Pasta.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Pizza.jpg',
-            'lnk': 'Sushi' 
-        },
-        {
-            'img': 'Images/Menu/Rolls.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Salades.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Soup.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Sushi.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Thakuski.jpg',
-            'lnk': 'Sushi'
-        },
-    ]
-    templ = '''
-                    SmartTileWithLabel:
-                        allow_stretch: True
-                        mipmap: False
-                        box_color: (1, 1, 1, 0)
-                        source: "{}"
-                        on_release: root.manager.current = '{}'
-    '''
-    for i in range(len(img_list_menu)):
-        menu_buttons += templ.format(img_list_menu[i]['img'], img_list_menu[i]['lnk'])
-    mm = menu_head + menu_buttons_head + menu_buttons
-    Menu = Builder.load_string(mm)
 
 class Sushi(Screen):
     sushi_buttons = ''
@@ -333,7 +197,7 @@ class Sushi(Screen):
         },
         {
             'img': 'Images/Sushi/FreshRoll.jpg',
-            'txt': 'Фреш ролл',
+            # 'txt': 'Фреш ролл',
             'txt': 'Филадельфия де люкс',
             'price': ' 260руб',
             'lnk': 'Chicago_Roll'
@@ -446,6 +310,7 @@ class Sushi(Screen):
     ss = sushi_head + sushi_buttons_head + sushi_buttons
     Sushi = Builder.load_string(ss)
 
+
 class Chicago_Roll(ScrollView, Screen):
     chicago_roll_label = ''
     list_chicago = [
@@ -505,7 +370,9 @@ class Chicago_Roll(ScrollView, Screen):
                                            list_chicago[i]['col'],
                                            list_chicago[i]['font'])
     cr = chicago_roll_head + chicago_roll_info + chicago_button + chicago_text + chicago_roll_label
-    Chicago_Roll = Builder.load_string(cr) 
+    Chicago_Roll = Builder.load_string(cr)
+
+
 class Cart(ScrollView, Screen):
     # cart_shop = '[]'
     if cart_shop == '[]':
@@ -516,18 +383,94 @@ class Cart(ScrollView, Screen):
     cart = cart_head + cart_buttons_head + cart_shop
     Cart = Builder.load_string(cart)
 
-class Manager(ScreenManager):
-    screen_menu = ObjectProperty(None)
-    screen_sushi = ObjectProperty(None)
-    screen_cart = ObjectProperty(None)
-    screen_chicago_roll = ObjectProperty(None)
+
+class PandaManager(ScreenManager):
+    pass
+
+
+class Menu(Screen):
+    pass
+
 
 class PandaApp(App):
+    img_list_menu = [
+        {
+            "img": 'Images/Menu/Candies.jpg',
+            "lnk": 'Sushi'
+        },
+        {
+            'img': 'Images/Menu/Garneir.jpg',
+            'lnk': 'Sushi'
+        },
+        {
+            'img': 'Images/Menu/Homosakki.jpg',
+            'lnk': 'Sushi'
+        },
+        {
+            'img': 'Images/Menu/Hot.jpg',
+            'lnk': 'Sushi'
+        },
+        {
+            'img': 'Images/Menu/MoreRolls.jpg',
+            'lnk': 'Sushi'
+        },
+        {
+            'img': 'Images/Menu/Nigiri.jpg',
+            'lnk': 'Sushi'
+        },
+        {
+            'img': 'Images/Menu/Packs.jpg',
+            'lnk': 'Sushi'
+        },
+        {
+            'img': 'Images/Menu/Pasta.jpg',
+            'lnk': 'Sushi'
+        },
+        {
+            'img': 'Images/Menu/Pizza.jpg',
+            'lnk': 'Sushi'
+        },
+        {
+            'img': 'Images/Menu/Rolls.jpg',
+            'lnk': 'Sushi'
+        },
+        {
+            'img': 'Images/Menu/Salades.jpg',
+            'lnk': 'Sushi'
+        },
+        {
+            'img': 'Images/Menu/Soup.jpg',
+            'lnk': 'Sushi'
+        },
+        {
+            'img': 'Images/Menu/Sushi.jpg',
+            'lnk': 'Sushi'
+        },
+        {
+            'img': 'Images/Menu/Thakuski.jpg',
+            'lnk': 'Sushi'
+        },
+    ]
 
     def build(self):
+        # import pprint
+        Builder.load_file('kv/manager.kv')
+        Builder.load_file('kv/main_screen.kv')
+        Builder.load_file('kv/ms_item.kv')
+
         self.icon = 'Images/panda.png'
-        m = Manager(transition=NoTransition())
-        return m
+        root = PandaManager(transition=NoTransition())
+
+        for i in range(len(self.img_list_menu)):
+            wid = Builder.template('PictButton', **{
+                'img': self.img_list_menu[i]['img'],
+                'link': self.img_list_menu[i]['lnk'],
+            })
+
+            root.ids['Menu'].ids['main_screen_container'].add_widget(wid)
+
+        return root
+
 
 if __name__ == '__main__':
-    PandaApp().run() 
+    PandaApp().run()

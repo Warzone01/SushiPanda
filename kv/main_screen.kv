@@ -1,0 +1,30 @@
+<Menu>:
+    Screen:
+        name: 'Menu'
+        id: menu
+        BoxLayout:
+            orientation: 'vertical'
+            ActionBar:
+                background_color: (0, 5, 0, 0.8)
+                pos_hint: {'top':1}
+                ActionView:
+                    use_sperator: True
+                    ActionPrevious:
+                        app_icon: 'Images/panda.png'
+                        title: 'Caffe Panda'
+                        with_previous: False
+                    ActionOverflow:
+                    ActionButton:
+                        icon: 'ico.png'
+                        on_release: root.manager.current = 'Cart'
+            ScrollView:
+                GridLayout:
+                    cols: 1
+                    size: self.size
+                    size_hint_y: None
+                    row_default_height: (self.width - self.cols*self.spacing[0])/2
+                    row_force_default: False
+                    height: self.minimum_height
+                    padding: 3
+                    spacing: 3
+                    id: main_screen_container
