@@ -1,0 +1,230 @@
+#:kivy 1.10
+#:import SmartTile kivymd.grid.SmartTile
+#:import MDBottomNavigationItem kivymd.tabs.MDBottomNavigationItem
+
+<Menu>:
+    Screen:
+        name: 'Menu'
+        BoxLayout:
+            orientation: 'vertical'
+            ActionBar:
+                background_color: (0, 5, 0, 0.8)
+                pos_hint: {'top':1}
+                ActionView:
+                    use_sperator: True
+                    ActionPrevious:
+                        app_icon: 'Images/panda.png'
+                        title: 'Caffe Panda'
+                        with_previous: False
+                    ActionOverflow:
+                    ActionButton:
+                        icon: 'ico.png'
+                        on_release: root.manager.current = 'Cart'
+# ========================
+            ScrollView:
+                GridLayout:
+                    cols: 1
+                    size: self.size
+                    size_hint_y: None
+                    row_default_height: (self.width - self.cols*self.spacing[0])/2
+                    row_force_default: False
+                    height: self.minimum_height
+                    padding: 3
+                    spacing: 3
+# ========================
+                    SmartTileWithLabel:
+                        allow_stretch: True
+                        mipmap: False
+                        box_color: (1, 1, 1, 0)
+                        source: "Images/Menu/Candies.jpg"
+                        on_release: root.manager.current = 'Sushi'
+
+
+# ========================
+<Sushi>:
+    name: 'Sushi'
+    BoxLayout:
+        orientation: 'vertical'
+        ActionBar:
+            background_color: (0, 5, 0, 0.8)
+            pos_hint: {'top':1}
+            ActionView:
+                use_sperator: True
+                ActionPrevious:
+                    app_icon: 'Images/panda.png'
+                    title: 'Caffe Panda'
+                    with_previous: True
+                    on_release: root.manager.current = 'Menu'
+                ActionOverflow:
+                ActionButton:
+                    icon: 'ico.png'
+                    on_release: root.manager.current = 'Cart'
+
+# ========================
+        ScrollView:
+            GridLayout:
+                orientation: 'vertical'
+                cols: 2
+                size_hint_y: None
+                row_default_height: (self.width - self.cols * self.spacing[0]) / 2
+                row_force_default: True
+                height: self.minimum_height
+                padding: 0
+                spacing: 0
+# ========================
+
+                SmartTileWithLabel:
+                    allow_stretch: False
+                    mipmap: False
+                    box_color: (1, 1, 1, 0.5)
+                    source: "Images/Sushi/CicagoRoll.jpg"
+                    text: 'Чикаго Ролл' + '\n  260руб'
+                    on_release: root.manager.current = 'Chicago_Roll'
+
+# ========================
+
+<Cart>:
+    name: 'Cart'
+    BoxLayout:
+        orientation: 'vertical'
+        ActionBar:
+            background_color: (0, 5, 0, 0.8)
+            pos_hint: {'top':1}
+            ActionView:
+                use_sperator: True
+                ActionPrevious:
+                    app_icon: 'Images/panda.png'
+                    title: 'Caffe Panda'
+                    with_previous: True
+                    on_release: root.manager.current = 'Menu'
+                ActionOverflow:
+                ActionButton:
+                    icon: 'ico.png'
+
+# ========================
+
+        ScrollView:
+            BoxLayout:
+                orientation: 'vertical'
+
+# ========================
+
+                Label:
+                    text: 'Ваша корзина пуста'
+                    color: (0, 0, 0, 0.5)
+                    font_size: 30
+
+# ========================
+
+<Chicago_Roll>:
+    name: 'Chicago_Roll'
+    BoxLayout:
+        orientation: 'vertical'
+        ActionBar:
+            background_color: (0, 5, 0, 0.8)
+            pos_hint: {'top':1}
+            ActionView:
+                use_sperator: True
+                ActionPrevious:
+                    app_icon: 'Images/panda.png'
+                    title: 'Caffe Panda'
+                    with_previous: True
+                    on_release: root.manager.current = 'Sushi'
+                ActionOverflow:
+                ActionButton:
+                    icon: 'ico.png'
+                    on_release: root.manager.current = 'Cart'
+
+        BoxLayout:
+            size_hint_y: 1
+            size_hint_x: 1
+            height: 1000
+            orientation: 'vertical'
+
+            SmartTileWithLabel:
+                allow_stretch: False
+                mipmap: False
+                box_color: (1, 1, 1, 0.5)
+                source: 'Images/Sushi/CicagoRoll.jpg'
+                text: 'Добавить в корзину'
+                on_press: cart_shop.append(chicago_button)
+
+
+        ScrollView:
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: 300
+
+                Label:
+                    text: 'Чикаго ролл'
+                    font_size: 35
+                    color: (0, 0, 0, 0.5)
+                    font_name: 'Roboto'
+
+                Label:
+                    text: '260 руб.'
+                    font_size: 30
+                    color: (0, 0, 0, 0.5)
+                    font_name: 'Roboto'
+
+                Label:
+                    text: 'бекон,'
+                    font_size: 20
+                    color: (0, 0, 0, 0.5)
+                    font_name: 'Roboto'
+
+                Label:
+                    text: 'лосось жаренный,'
+                    font_size: 20
+                    color: (0, 0, 0, 0.5)
+                    font_name: 'Roboto'
+
+                Label:
+                    text: 'сливочный сыр,'
+                    font_size: 20
+                    color: (0, 0, 0, 0.5)
+                    font_name: 'Roboto'
+
+                Label:
+                    text: 'огурец.'
+                    font_size: 20
+                    color: (0, 0, 0, 0.5)
+                    font_name: 'Roboto'
+
+                Label:
+                    text: '8шт./290гр.'
+                    font_size: 20
+                    color: (0, 0, 0, 0.5)
+                    font_name: 'Roboto'
+
+
+
+<Manager>:
+    id: screen_manager
+
+    screen_menu: Menu
+    screen_sushi: Sushi
+    screen_cart: Cart
+    screen_chicago_roll: Chicago_Roll
+
+    Menu:
+        id: Menu
+        name: 'Menu'
+        manager: screen_manager
+
+    Sushi:
+        id: Sushi
+        name: 'Sushi'
+        manager: screen_manager
+
+    Cart:
+        id: Cart
+        name: 'Cart'
+        manager: screen_manager
+
+    Chicago_Roll:
+        id: Chicago_Roll
+        name: 'Chicago_Roll'
+        manager: screen_manager
+

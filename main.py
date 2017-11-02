@@ -11,6 +11,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition, \
     NoTransition
 from kivy.uix.scrollview import ScrollView
 from kivy.properties import ObjectProperty
+import json
 
 Window.clearcolor = (1, 1, 1, 1)
 # Window.size = (720, 1280)
@@ -374,7 +375,7 @@ class Chicago_Roll(ScrollView, Screen):
 
 
 class Cart(ScrollView, Screen):
-    # cart_shop = '[]'
+    cart_shop = '[]'
     if cart_shop == '[]':
         cart_shop = cart_label
     # else:
@@ -393,67 +394,16 @@ class Menu(Screen):
 
 
 class PandaApp(App):
-    img_list_menu = [
-        {
-            "img": 'Images/Menu/Candies.jpg',
-            "lnk": 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Garneir.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Homosakki.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Hot.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/MoreRolls.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Nigiri.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Packs.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Pasta.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Pizza.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Rolls.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Salades.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Soup.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Sushi.jpg',
-            'lnk': 'Sushi'
-        },
-        {
-            'img': 'Images/Menu/Thakuski.jpg',
-            'lnk': 'Sushi'
-        },
-    ]
+
+    def load_json(self):
+        with open('main.json') as json_data:
+            d = json.load(json_data)
+        return d
 
     def build(self):
         # import pprint
+        self.main_data = self.load_json()
+
         Builder.load_file('kv/manager.kv')
         Builder.load_file('kv/main_screen.kv')
         Builder.load_file('kv/ms_item.kv')
@@ -461,10 +411,11 @@ class PandaApp(App):
         self.icon = 'Images/panda.png'
         root = PandaManager(transition=NoTransition())
 
-        for i in range(len(self.img_list_menu)):
+        main_menu = self.main_data['main_menu']
+        for i in range(1, len(main_menu)):
             wid = Builder.template('PictButton', **{
-                'img': self.img_list_menu[i]['img'],
-                'link': self.img_list_menu[i]['lnk'],
+                'img': main_menu[str(i)]['img'],
+                'link': main_menu[str(i)]['lnk'],
             })
 
             root.ids['Menu'].ids['main_screen_container'].add_widget(wid)

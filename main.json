@@ -1,0 +1,77 @@
+{
+    "main_menu": {
+        "1": {
+            "img": "Images/Menu/Candies.jpg",
+            "lnk": "Sushi"
+        },
+        "2": {
+            "img": "Images/Menu/Garneir.jpg",
+            "lnk": "Sushi"
+        },
+        "3": {
+            "img": "Images/Menu/Homosakki.jpg",
+            "lnk": "Sushi"
+        },
+        "4": {
+            "img": "Images/Menu/Hot.jpg",
+            "lnk": "Sushi"
+        },
+        "5": {
+            "img": "Images/Menu/MoreRolls.jpg",
+            "lnk": "Sushi"
+        },
+        "6": {
+            "img": "Images/Menu/Nigiri.jpg",
+            "lnk": "Sushi"
+        },
+        "7": {
+            "img": "Images/Menu/Packs.jpg",
+            "lnk": "Sushi"
+        },
+        "8": {
+            "img": "Images/Menu/Pasta.jpg",
+            "lnk": "Sushi"
+        },
+        "9": {
+            "img": "Images/Menu/Pizza.jpg",
+            "lnk": "Sushi"
+        },
+        "10": {
+            "img": "Images/Menu/Rolls.jpg",
+            "lnk": "Sushi"
+        },
+        "11": {
+            "img": "Images/Menu/Salades.jpg",
+            "lnk": "Sushi"
+        },
+        "12": {
+            "img": "Images/Menu/Soup.jpg",
+            "lnk": "Sushi"
+        },
+        "13": {
+            "img": "Images/Menu/Sushi.jpg",
+            "lnk": "Sushi"
+        },
+        "14": {
+            "img": "Images/Menu/Thakuski.jpg",
+            "lnk": "Sushi"
+        }
+    },
+    "second_level": {
+        "Sushi": {
+                    "1": {
+                        "img": "",
+                        "name": "",
+                        "lnk": "",
+                        "price": ""
+                    },
+                    "2": {
+                        "img": "",
+                        "name": "",
+                        "lnk": "",
+                        "price": ""
+                    }
+        
+                }
+    }
+}
