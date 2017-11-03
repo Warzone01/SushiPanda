@@ -1,0 +1,31 @@
+<Sushi>:
+    Screen:
+        id: Sushi
+        name: 'Sushi'
+        BoxLayout:
+            orientation: 'vertical'
+            ActionBar:
+                background_color: (0, 5, 0, 0.8)
+                pos_hint: {'top':1}
+                ActionView:
+                    use_sperator: True
+                    ActionPrevious: 
+                        app_icon: 'Images/panda.png'
+                        title: 'Caffe Panda'
+                        with_previous: True
+                        on_release: root.manager.current = 'Menu'
+                    ActionOverflow:
+                    ActionButton:
+                        icon: 'ico.png'
+                        on_release: root.manager.current = 'Cart'
+            ScrollView:
+                GridLayout:
+                    orientation: 'vertical'
+                    cols: 2
+                    size_hint_y: None
+                    row_default_height: (self.width - self.cols*self.spacing[0])/2
+                    row_force_default: True
+                    height: self.minimum_height
+                    padding: 0
+                    spacing: 0
+                    id: sushi_container
