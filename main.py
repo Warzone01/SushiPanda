@@ -22,43 +22,6 @@ Builder.load_string('''
 #:import MDBottomNavigationItem kivymd.tabs.MDBottomNavigationItem
 ''')
 
-# # Меню суши
-# sushi_head = '''
-# <Sushi>:
-#     id: Sushi
-#     name: 'Sushi'
-#     BoxLayout:
-#         orientation: 'vertical'
-#         ActionBar:
-#             background_color: (0, 5, 0, 0.8)
-#             pos_hint: {'top':1}
-#             ActionView:
-#                 use_sperator: True
-#                 ActionPrevious: 
-#                     app_icon: 'Images/panda.png'
-#                     title: 'Caffe Panda'
-#                     with_previous: True
-#                     on_release: root.manager.current = 'Menu'
-#                 ActionOverflow:
-#                 ActionButton:
-#                     icon: 'ico.png'
-#                     on_release: root.manager.current = 'Cart'
-# '''
-
-# # Настройки кнопок
-# sushi_buttons_head = '''
-#         ScrollView:
-#             GridLayout:
-#                 orientation: 'vertical'
-#                 cols: 2
-#                 size_hint_y: None
-#                 row_default_height: (self.width - self.cols*self.spacing[0])/2
-#                 row_force_default: True
-#                 height: self.minimum_height
-#                 padding: 0
-#                 spacing: 0
-#                 id: sushi_container
-# '''
 sushi_buttons = ''
 cart_head = '''
 <Cart>:
@@ -143,183 +106,7 @@ chicago_roll_label = ''
 
 class Sushi(Screen):
     pass
-    # sushi_buttons = ''
-    # img_list_sushi = [
-    #     {
-    #         'img': 'Images/Sushi/CicagoRoll.jpg',
-    #         'txt': 'Чикаго Ролл',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/LavaSLososem.jpg',
-    #         'txt': 'Лава с лососем',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/LavaSKrabom.jpg',
-    #         'txt': 'Лава с крабом',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/LavaSKrevetkoi.jpg',
-    #         'txt': 'Лава с криветкой',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/LavaSUgrem.jpg',
-    #         'txt': 'Лава с угрём',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/RollOvosh.jpg',
-    #         'txt': 'Ролл в темпурной крошке(Овощной)',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/RollLosos.jpg',
-    #         'txt': 'Ролл в темпурной крошке с лососем',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/RollChicken.jpg',
-    #         'txt': 'Ролл в темпурной крошке с курой',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/HanMaki.jpg',
-    #         'txt': 'Хан маки',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/PhiladelphiaDELUX.jpg',
-    #         'txt': 'Филадельфия де люкс',
-    #         'price': '260',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/FreshRoll.jpg',
-    #         'txt': 'Фреш ролл',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/SamuraiMaki.jpg',
-    #         'txt': 'Самурай маки',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/SakuraMaki.jpg',
-    #         'txt': 'Сакура маки',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/PandaMaki.jpg',
-    #         'txt': 'Панда маки',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/MunhenRoll.jpg',
-    #         'txt': 'Мюнхен ролл',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/MonteKarlo.jpg',
-    #         'txt': 'Монте карло',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/MaiamiMaki.jpg',
-    #         'txt': 'Майами маки',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/LeonaRoll.jpg',
-    #         'txt': 'Леона ролл',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/LiteRoll.jpg',
-    #         'txt': 'Лайт ролл',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/KanadskiiRoyalo.jpg',
-    #         'txt': 'Канадский тобияко роял',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/KanadaSKrevetkoi.jpg',
-    #         'txt': 'Канада с креветкой',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/CaliforniaMaki.jpg',
-    #         'txt': 'Калифорния маки',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/GonkongRoll.jpg',
-    #         'txt': 'Гонконг ролл',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/GeishaMaki.jpg',
-    #         'txt': 'Гейша маки',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/BengalskiRoll.jpg',
-    #         'txt': 'Бенгальский ролл',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    #     {
-    #         'img': 'Images/Sushi/VeneciaRoll.jpg',
-    #         'txt': 'Венеция ролл',
-    #         'price': ' 260руб',
-    #         'lnk': 'Chicago_Roll'
-    #     },
-    # ]
-    # templ = '''
-    #             SmartTileWithLabel:
-    #                 allow_stretch: False
-    #                 mipmap: False
-    #                 box_color: (1, 1, 1, 0.5)
-    #                 source: "{}"
-    #                 text: '{}' + '\\n {}'
-    #                 on_release: root.manager.current = '{}'
-    # '''
-    # for i in range(len(img_list_sushi)):
-    #     sushi_buttons += templ.format(img_list_sushi[i]['img'],
-    #                                   img_list_sushi[i]['txt'],
-    #                                   img_list_sushi[i]['price'],
-    #                                   img_list_sushi[i]['lnk'])
-    # ss = sushi_head + sushi_buttons_head + sushi_buttons
-    # Sushi = Builder.load_string(ss)
-
-
+ 
 class Chicago_Roll(ScrollView, Screen):
     chicago_roll_label = ''
     list_chicago = [
@@ -433,13 +220,13 @@ class PandaApp(App):
         sushi = self.main_data['second_level']['Sushi']
 
         for i in range(1, len(sushi)):
-            widg = Builder.template('PictButtonMenu', **{
+            wid = Builder.template('PictButtonMenu', **{
                 'img': sushi[str(i)]['img'],
                 'txt': sushi[str(i)]['txt'],
                 'price': sushi[str(i)]['price'],
                 'lnk': sushi[str(i)]['lnk']
             })
-            root.ids['Sushi'].ids['sushi_container'].add_widget(widg)
+            root.ids['Sushi'].ids['sushi_container'].add_widget(wid)
 
         return root
 
