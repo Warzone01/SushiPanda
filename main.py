@@ -94,7 +94,7 @@ chicago_button = '''
 '''
 chicago_summ = '''
         BoxLayout:
-            size_hint_y: 0.2
+            size_hint_y: 0.3
             size_hint_x: None
             MDIconButton:
                 icon: 'minus'
@@ -207,19 +207,29 @@ class Menu(Screen):
 class PandaApp(App):
 
     def load_json(self):
-        with open('main.json') as json_data:
+        with open('assets/main.json', encoding='utf-8') as json_data:
             d = json.load(json_data)
         return d
 
     def build(self):
         # import pprint
         self.main_data = self.load_json()
+        with open('kv/manager.kv', encoding='utf8') as f:
+            Builder.load_string(f.read())
+        with open('kv/main_screen.kv', encoding='utf8') as f:
+            Builder.load_string(f.read())
+        with open('kv/ms_item.kv', encoding='utf8') as f:
+            Builder.load_string(f.read())
+        with open('kv/ms_item_2.kv', encoding='utf8') as f:
+            Builder.load_string(f.read())
+        with open('kv/sushi_screan.kv', encoding='utf8') as f:
+            Builder.load_string(f.read())
 
-        Builder.load_file('kv/manager.kv')
-        Builder.load_file('kv/main_screen.kv')
-        Builder.load_file('kv/ms_item.kv')
-        Builder.load_file('kv/ms_item_2.kv')
-        Builder.load_file('kv/sushi_screan.kv')
+        # Builder.load_file('kv/manager.kv')
+        # Builder.load_file('kv/main_screen.kv')
+        # Builder.load_file('kv/ms_item.kv')
+        # Builder.load_file('kv/ms_item_2.kv')
+        # Builder.load_file('kv/sushi_screan.kv')
 
         self.icon = 'Images/panda.png'
         root = PandaManager(transition=NoTransition())
