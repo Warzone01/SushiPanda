@@ -14,6 +14,7 @@ from kivy.properties import ObjectProperty, NumericProperty
 import json
 from kivy.uix.label import Label
 
+
 Window.clearcolor = (1, 1, 1, 1)
 # Window.size = (720, 1280)
 
@@ -83,39 +84,44 @@ chicago_roll_info = '''
             cols: 1
             orientation: 'vertical' 
             size_hint_x: 1
-            size_hint_y: 1
+            size_hint_y: 3
             spacing: 3
             padding: 3
 '''
 chicago_button = '''
-            SmartTileWithLabel:
-                allow_stretch: False
-                mipmap: False
-                box_color: (1, 1, 1, 0.5)
+            Image:
                 source: 'Images/Sushi/CicagoRoll.jpg'
-                text: 'Добавить в корзину'
 '''
 chicago_summ = '''
         RelativeLayout:
             pos: self.parent.pos
             size: self.parent.size
             BoxLayout:
-                size_hint_y: 0.3
-                size_hint_x: 0.3
+                size_hint_y: 1
+                size_hint_x: 1
                 spacing: 3
                 padding: 3
                 MDIconButton:
+                    pos_hint:{"center_x":0,"center_y":0.5}
                     id: minus
                     icon: 'minus'
                     on_release: root.minus()
                 MyLabel:
                     id: lb1
+                    pos_hint: {'center_x': 0, 'center_y': 0.5}
                     text: "Кол-во: {}".format(self.value)
                     color: 0, 0, 0, 0.5
+                    font_size: 45
                 MDIconButton:
+                    pos_hint:{"center_x":0,"center_y":0.5}
+                   
                     id: plus
                     icon: 'plus'
                     on_release: root.fc()
+                MDFlatButton:
+                    id: cartbutton
+                    text: "Добавить в корзину"
+                    pos_hint: {'center_x': 0, 'center_y': 0.5}
 
 '''
 chicago_text = '''
