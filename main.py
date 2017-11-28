@@ -13,6 +13,8 @@ from kivy.uix.scrollview import ScrollView
 from kivy.properties import ObjectProperty, NumericProperty
 import json
 from kivy.uix.label import Label
+from kivy.storage.jsonstore import JsonStore
+from os.path import join
 
 
 Window.clearcolor = (1, 1, 1, 1)
@@ -90,7 +92,7 @@ chicago_roll_info = '''
 '''
 chicago_button = '''
             Image:
-                source: 'Images/Sushi/CicagoRoll.jpg'
+                source: 'Images/Sushi/CicagoRoll.png'
 '''
 chicago_summ = '''
         RelativeLayout:
@@ -111,10 +113,9 @@ chicago_summ = '''
                     pos_hint: {'center_x': 0, 'center_y': 0.5}
                     text: "Кол-во: {}".format(self.value)
                     color: 0, 0, 0, 0.5
-                    font_size: 45
+                    font_size: 30
                 MDIconButton:
                     pos_hint:{"center_x":0,"center_y":0.5}
-                   
                     id: plus
                     icon: 'plus'
                     on_release: root.fc()
@@ -135,7 +136,21 @@ chicago_roll_label = ''
 
 
 class Sushi(Screen):
-    pass
+    def post_build_init(self, *args):
+        def __init__(self, **kwargs):
+            super(PandaApp, self).__init__(**kwargs)
+            # Setting it up to listen for keyboard events
+            Window.bind(on_keyboard=self.onBackBtn)
+
+    def onBackBtn(self, window, key, *args):
+        if key == 27:
+            # Do whatever you need to do, like check if there are any
+            # screens that you can go back to.
+            # return True if you don't want to close app
+            # return False if you do
+            key.bind('Menu')
+            return True
+        return False
 
 class MyLabel(Label):
     value = NumericProperty(1)
@@ -207,6 +222,21 @@ class Chicago_Roll(ScrollView, Screen):
                                            list_chicago[i]['font'])
     cr = chicago_roll_head + chicago_roll_info + chicago_button + chicago_summ + chicago_text + chicago_roll_label
     Chicago_Roll = Builder.load_string(cr)
+    def post_build_init(self, *args):
+        def __init__(self, **kwargs):
+            super(PandaApp, self).__init__(**kwargs)
+            # Setting it up to listen for keyboard events
+            Window.bind(on_keyboard=self.onBackBtn)
+
+    def onBackBtn(self, window, key, *args):
+        if key == 27:
+            # Do whatever you need to do, like check if there are any
+            # screens that you can go back to.
+            # return True if you don't want to close app
+            # return False if you do
+            key.bind('Menu')
+            return True
+        return False
 
 
 class Cart(ScrollView, Screen):
@@ -225,7 +255,22 @@ class PandaManager(ScreenManager):
 
 
 class Menu(Screen):
-    pass
+    def post_build_init(self, *args):
+        def __init__(self, **kwargs):
+            super(PandaApp, self).__init__(**kwargs)
+            # Setting it up to listen for keyboard events
+            Window.bind(on_keyboard=self.onBackBtn)
+
+    def onBackBtn(self, window, key, *args):
+        if key == 27:
+            # Do whatever you need to do, like check if there are any
+            # screens that you can go back to.
+            # return True if you don't want to close app
+            # return False if you do
+            key.bind('Menu')
+            return True
+        return False
+    
 
 
 class PandaApp(App):
@@ -273,6 +318,22 @@ class PandaApp(App):
             root.ids['Sushi'].ids['sushi_container'].add_widget(wid)
 
         return root
+
+    def post_build_init(self, *args):
+        def __init__(self, **kwargs):
+            super(PandaApp, self).__init__(**kwargs)
+            # Setting it up to listen for keyboard events
+            Window.bind(on_keyboard=self.onBackBtn)
+
+    def onBackBtn(self, window, key, *args):
+        if key == 27:
+            # Do whatever you need to do, like check if there are any
+            # screens that you can go back to.
+            # return True if you don't want to close app
+            # return False if you do
+            key.bind('Menu')
+            return True
+        return False
 
 
 if __name__ == '__main__':

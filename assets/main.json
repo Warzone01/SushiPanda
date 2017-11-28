@@ -1,216 +1,216 @@
 {
     "main_menu": {
         "1": {
-            "img": "Images/Menu/Candies.jpg",
+            "img": "Images/Menu/Candies.png",
             "lnk": "Sushi"
         },
         "2": {
-            "img": "Images/Menu/Garneir.jpg",
+            "img": "Images/Menu/Garneir.png",
             "lnk": "Sushi"
         },
         "3": {
-            "img": "Images/Menu/Homosakki.jpg",
+            "img": "Images/Menu/Homosakki.png",
             "lnk": "Sushi"
         },
         "4": {
-            "img": "Images/Menu/Hot.jpg",
+            "img": "Images/Menu/Hot.png",
             "lnk": "Sushi"
         },
         "5": {
-            "img": "Images/Menu/MoreRolls.jpg",
+            "img": "Images/Menu/Morerolls.png",
             "lnk": "Sushi"
         },
         "6": {
-            "img": "Images/Menu/Nigiri.jpg",
+            "img": "Images/Menu/Nigiri.png",
             "lnk": "Sushi"
         },
         "7": {
-            "img": "Images/Menu/Packs.jpg",
+            "img": "Images/Menu/Packs.png",
             "lnk": "Sushi"
         },
         "8": {
-            "img": "Images/Menu/Pasta.jpg",
+            "img": "Images/Menu/Pasta.png",
             "lnk": "Sushi"
         },
         "9": {
-            "img": "Images/Menu/Pizza.jpg",
+            "img": "Images/Menu/Pizza.png",
             "lnk": "Sushi"
         },
         "10": {
-            "img": "Images/Menu/Rolls.jpg",
+            "img": "Images/Menu/Rolls.png",
             "lnk": "Sushi"
         },
         "11": {
-            "img": "Images/Menu/Salades.jpg",
+            "img": "Images/Menu/Salades.png",
             "lnk": "Sushi"
         },
         "12": {
-            "img": "Images/Menu/Soup.jpg",
+            "img": "Images/Menu/Soup.png",
             "lnk": "Sushi"
         },
         "13": {
-            "img": "Images/Menu/Sushi.jpg",
+            "img": "Images/Menu/Sushi.png",
             "lnk": "Sushi"
         },
         "14": {
-            "img": "Images/Menu/Thakuski.jpg",
+            "img": "Images/Menu/Thakuski.png",
             "lnk": "Sushi"
         }
     },
     "second_level": {
         "Sushi": {
             "1": {
-                "img": "Images/Sushi/CicagoRoll.jpg",
+                "img": "Images/Sushi/CicagoRoll.png",
                 "txt": "Чикаго Ролл",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "2": {
-                "img": "Images/Sushi/LavaSLososem.jpg",
+                "img": "Images/Sushi/LavaSLososem.png",
                 "txt": "Лава с лососем",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "3": {
-                "img": "Images/Sushi/LavaSKrabom.jpg",
+                "img": "Images/Sushi/LavaSKrabom.png",
                 "txt": "Лава с крабом",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "4": {
-                "img": "Images/Sushi/LavaSKrevetkoi.jpg",
+                "img": "Images/Sushi/LavaSKrevetkoi.png",
                 "txt": "Лава с криветкой",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "5": {
-                "img": "Images/Sushi/LavaSUgrem.jpg",
+                "img": "Images/Sushi/LavaSUgrem.png",
                 "txt": "Лава с угрём",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "6": {
-                "img": "Images/Sushi/RollOvosh.jpg",
+                "img": "Images/Sushi/RollOvosh.png",
                 "txt": "Ролл в темпурной крошке(Овощной)",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "7": {
-                "img": "Images/Sushi/RollLosos.jpg",
+                "img": "Images/Sushi/RollLosos.png",
                 "txt": "Ролл в темпурной крошке с лососем",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "8":{
-                "img": "Images/Sushi/RollChicken.jpg",
+                "img": "Images/Sushi/RollChicken.png",
                 "txt": "Ролл в темпурной крошке с курой",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "9": {
-                "img": "Images/Sushi/HanMaki.jpg",
+                "img": "Images/Sushi/HanMaki.png",
                 "txt": "Хан маки",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "10": {
-                "img": "Images/Sushi/PhiladelphiaDELUX.jpg",
+                "img": "Images/Sushi/PhiladelphiaDELUX.png",
                 "txt": "Филадельфия де люкс",
                 "price": "260",
                 "lnk": "Chicago_Roll"
             },
             "11": {
-                "img": "Images/Sushi/FreshRoll.jpg",
+                "img": "Images/Sushi/FreshRoll.png",
                 "txt": "Фреш ролл",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "12": {
-                "img": "Images/Sushi/SamuraiMaki.jpg",
+                "img": "Images/Sushi/SamuraiMaki.png",
                 "txt": "Самурай маки",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "13": {
-                "img": "Images/Sushi/SakuraMaki.jpg",
+                "img": "Images/Sushi/SakuraMaki.png",
                 "txt": "Сакура маки",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "14": {
-                "img": "Images/Sushi/PandaMaki.jpg",
+                "img": "Images/Sushi/PandaMaki.png",
                 "txt": "Панда маки",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "15": {
-                "img": "Images/Sushi/MunhenRoll.jpg",
+                "img": "Images/Sushi/MunhenRoll.png",
                 "txt": "Мюнхен ролл",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "16": {
-                "img": "Images/Sushi/MonteKarlo.jpg",
+                "img": "Images/Sushi/MonteKarlo.png",
                 "txt": "Монте карло",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "17": {
-                "img": "Images/Sushi/MaiamiMaki.jpg",
+                "img": "Images/Sushi/MaiamiMaki.png",
                 "txt": "Майами маки",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "18": {
-                "img": "Images/Sushi/LeonaRoll.jpg",
+                "img": "Images/Sushi/LeonaRoll.png",
                 "txt": "Леона ролл",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "19": {
-                "img": "Images/Sushi/LiteRoll.jpg",
+                "img": "Images/Sushi/LiteRoll.png",
                 "txt": "Лайт ролл",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "20": {
-                "img": "Images/Sushi/KanadskiiRoyalo.jpg",
+                "img": "Images/Sushi/KanadskiiRoyalo.png",
                 "txt": "Канадский тобияко роял",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "21": {
-                "img": "Images/Sushi/KanadaSKrevetkoi.jpg",
+                "img": "Images/Sushi/KanadaSKrevetkoi.png",
                 "txt": "Канада с креветкой",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "22": {
-                "img": "Images/Sushi/CaliforniaMaki.jpg",
+                "img": "Images/Sushi/CaliforniaMaki.png",
                 "txt": "Калифорния маки",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "23": {
-                "img": "Images/Sushi/GonkongRoll.jpg",
+                "img": "Images/Sushi/GonkongRoll.png",
                 "txt": "Гонконг ролл",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "24": {
-                "img": "Images/Sushi/GeishaMaki.jpg",
+                "img": "Images/Sushi/GeishaMaki.png",
                 "txt": "Гейша маки",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "25": {
-                "img": "Images/Sushi/BengalskiRoll.jpg",
+                "img": "Images/Sushi/BengalskiRoll.png",
                 "txt": "Бенгальский ролл",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
             },
             "26": {
-                "img": "Images/Sushi/VeneciaRoll.jpg",
+                "img": "Images/Sushi/VeneciaRoll.png",
                 "txt": "Венеция ролл",
                 "price": " 260",
                 "lnk": "Chicago_Roll"

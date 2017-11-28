@@ -13,10 +13,10 @@ package.domain = org
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas,json
+source.include_exts = py,png,kv,atlas,json
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = assets/*,images/*,Images/*
+source.include_patterns = kv/*,assets/*,images/*,Images/*.png.json
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
@@ -25,7 +25,7 @@ source.include_patterns = assets/*,images/*,Images/*
 #source.exclude_dirs = tests, bin
 
 # (list) List of exclusions using pattern matching
-#source.exclude_patterns = license,images/*/*.jpg
+#source.exclude_patterns = license,images/*/*.png
 
 # (str) Application versioning (method 1)
 version = 0.1
@@ -54,7 +54,6 @@ icon.filename = Images/panda.png
 
 # (str) Supported orientation (one of landscape, portrait or all)
 orientation = portrait
-x86
 # (list) List of service to declare
 #services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
 
@@ -63,7 +62,7 @@ x86
 #
 
 #
-# author = © Copyright Infoandroid.presplash_color = #FFFFFF
+author = © Copyright Infoandroid.presplash_color = #FFFFFF
 
 
 # change the major version of python used by the app
@@ -84,7 +83,7 @@ fullscreen = 0
 # red, blue, green, black, white, gray, cyan, magenta, yellow, lightgray,
 # darkgray, grey, lightgrey, darkgrey, aqua, fuchsia, lime, maroon, navy,
 # olive, purple, silver, teal.
-#android.presplash_color = #FFFFFF
+android.presplash_color = #FFFFFF
 
 # (list) Permissions
 #android.permissions = INTERNET
@@ -163,8 +162,8 @@ android.ndk_path = ../../crystax-ndk-10.3.2/
 
 # (list) Android additionnal libraries to copy into libs/armeabi
 #android.add_libs_armeabi = libs/android/*.so
-android.add_libs_armeabi_v7a = libs/android-v7/*.so
-#android.add_libs_x86 = libs/android-x86/*.so
+#android.add_libs_armeabi_v7a = libs/android-v7/*.so
+android.add_libs_x86 = libs/android-x86/*.so
 #android.add_libs_mips = libs/android-mips/*.so
 
 # (bool) Indicate whether the screen should stay on
@@ -182,10 +181,10 @@ android.add_libs_armeabi_v7a = libs/android-v7/*.so
 #android.logcat_filters = *:S python:D
 
 # (bool) Copy library instead of making a libpymodules.so
-#android.copy_libs = 1
+android.copy_libs = 1
 
 # (str) The Android arch to build for, choices: armeabi-v7a, arm64-v8a, x86
-android.arch = armeabi-v7a
+android.arch = x86
 
 #
 # Python for android (p4a) specific
@@ -200,7 +199,7 @@ android.arch = armeabi-v7a
 # (str) Filename to the hook for p4a
 #p4a.hook =
 
-p4a.force-build = True
+#p4a.force-build = True
 
 # (str) Bootstrap to use for android builds
 # p4a.bootstrap = sdl2
