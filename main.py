@@ -135,39 +135,12 @@ chicago_roll_label = ''
 
 
 class Sushi(Screen, ScrollView):
-    screen_manager=ObjectProperty(None)
-
-    def __init__(self, **kwargs):
-        super(Sushi,self).__init__(**kwargs)
-        Window.bind(on_keyboard=self.Android_back_click)
-
-    def Android_back_click(self,window,key,*largs):
-        if key == 27:
-            print('BackBtn==True')
-            print('2', self.manager)
-            self.manager.current = 'Menu'
-            return True
-        else:
-            return False
+    pass
 
 class MyLabel(Label):
     value = NumericProperty(1)
  
 class Chicago_Roll(ScrollView, Screen):
-    screen_manager=ObjectProperty(None)
-
-    def __init__(self, **kwargs):
-        super(Chicago_Roll,self).__init__(**kwargs)
-        Window.bind(on_keyboard=self.Android_back_click)
-
-    def Android_back_click(self,window,key,*largs):
-        if key == 27:
-            print('BackBtn==True')
-            print('3', self.manager)
-            self.manager.current = 'Sushi'
-            return True
-        else:
-            return False
 
     def fc(self):
         if self.ids.lb1.value < 10:
@@ -237,20 +210,6 @@ class Chicago_Roll(ScrollView, Screen):
     Chicago_Roll = Builder.load_string(cr)
     
 class Cart(ScrollView, Screen):
-    screen_manager=ObjectProperty(None)
-
-    def __init__(self, **kwargs ):
-        super(Cart,self).__init__(**kwargs)
-        Window.bind(on_keyboard=self.Android_back_click)
-
-    def Android_back_click(self,window,key,*largs):
-        if key == 27:
-            print('BackBtn==True')
-            print('1', self.manager)
-            self.manager.current = 'Menu'
-            return True
-        else:
-            return False
 
     cart_shop = '[]'
     if cart_shop == '[]':
@@ -266,20 +225,7 @@ class PandaManager(ScreenManager):
     pass
 
 class Menu(Screen):
-    screen_manager=ObjectProperty(None)
-
-    def __init__(self, **kwargs ):
-        super(Menu,self).__init__(**kwargs)
-        Window.bind(on_keyboard=self.Android_back_click)
-
-    def Android_back_click(self,window,key,*largs):
-        if key == 27:
-            print('BackBtn==True')
-            print('4', self.manager)
-            self.manager.current = 'Menu'
-            return False
-        else:
-            return False
+    pass
 
 class PandaApp(App):
     
@@ -326,7 +272,25 @@ class PandaApp(App):
             })
             root.ids['Sushi'].ids['sushi_container'].add_widget(wid)
 
+        self.bind(on_start=self.post_build_init)
+
         return root
+
+    def post_build_init(self,ev):
+        from kivy.base import EventLoop
+        EventLoop.window.bind(on_keyboard=self.hook_keyboard)
+
+    def hook_keyboard(self, window, key, *largs):
+        if key == 27:
+            print(self.root.current)
+            if self.root.current == 'Menu':
+                App.get_running_app().stop()
+            elif self.root.current == 'CicagoRoll':
+                self.root.current = 'Sushi'
+            else:
+                self.root.current = 'Menu'
+            return True 
+
 
 if __name__ == '__main__':
     PandaApp().run()
