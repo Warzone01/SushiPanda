@@ -3,7 +3,6 @@
 import kivy
 
 kivy.require('1.10.0')
-
 from kivy.lang import Builder
 from kivy.app import App
 from kivy.core.window import Window
@@ -135,27 +134,41 @@ chicago_text = '''
 chicago_roll_label = ''
 
 
-class Sushi(Screen):
-    def post_build_init(self, *args):
-        def __init__(self, **kwargs):
-            super(PandaApp, self).__init__(**kwargs)
-            # Setting it up to listen for keyboard events
-            Window.bind(on_keyboard=self.onBackBtn)
+class Sushi(Screen, ScrollView):
+    screen_manager=ObjectProperty(None)
 
-    def onBackBtn(self, window, key, *args):
+    def __init__(self, **kwargs):
+        super(Sushi,self).__init__(**kwargs)
+        Window.bind(on_keyboard=self.Android_back_click)
+
+    def Android_back_click(self,window,key,*largs):
         if key == 27:
-            # Do whatever you need to do, like check if there are any
-            # screens that you can go back to.
-            # return True if you don't want to close app
-            # return False if you do
-            key.bind('Menu')
+            print('BackBtn==True')
+            print('2', self.manager)
+            self.manager.current = 'Menu'
             return True
-        return False
+        else:
+            return False
 
 class MyLabel(Label):
     value = NumericProperty(1)
  
 class Chicago_Roll(ScrollView, Screen):
+    screen_manager=ObjectProperty(None)
+
+    def __init__(self, **kwargs):
+        super(Chicago_Roll,self).__init__(**kwargs)
+        Window.bind(on_keyboard=self.Android_back_click)
+
+    def Android_back_click(self,window,key,*largs):
+        if key == 27:
+            print('BackBtn==True')
+            print('3', self.manager)
+            self.manager.current = 'Sushi'
+            return True
+        else:
+            return False
+
     def fc(self):
         if self.ids.lb1.value < 10:
             self.ids.lb1.value += 1
@@ -222,24 +235,23 @@ class Chicago_Roll(ScrollView, Screen):
                                            list_chicago[i]['font'])
     cr = chicago_roll_head + chicago_roll_info + chicago_button + chicago_summ + chicago_text + chicago_roll_label
     Chicago_Roll = Builder.load_string(cr)
-    def post_build_init(self, *args):
-        def __init__(self, **kwargs):
-            super(PandaApp, self).__init__(**kwargs)
-            # Setting it up to listen for keyboard events
-            Window.bind(on_keyboard=self.onBackBtn)
-
-    def onBackBtn(self, window, key, *args):
-        if key == 27:
-            # Do whatever you need to do, like check if there are any
-            # screens that you can go back to.
-            # return True if you don't want to close app
-            # return False if you do
-            key.bind('Menu')
-            return True
-        return False
-
-
+    
 class Cart(ScrollView, Screen):
+    screen_manager=ObjectProperty(None)
+
+    def __init__(self, **kwargs ):
+        super(Cart,self).__init__(**kwargs)
+        Window.bind(on_keyboard=self.Android_back_click)
+
+    def Android_back_click(self,window,key,*largs):
+        if key == 27:
+            print('BackBtn==True')
+            print('1', self.manager)
+            self.manager.current = 'Menu'
+            return True
+        else:
+            return False
+
     cart_shop = '[]'
     if cart_shop == '[]':
         cart_shop = cart_label
@@ -253,27 +265,24 @@ class Cart(ScrollView, Screen):
 class PandaManager(ScreenManager):
     pass
 
-
 class Menu(Screen):
-    def post_build_init(self, *args):
-        def __init__(self, **kwargs):
-            super(PandaApp, self).__init__(**kwargs)
-            # Setting it up to listen for keyboard events
-            Window.bind(on_keyboard=self.onBackBtn)
+    screen_manager=ObjectProperty(None)
 
-    def onBackBtn(self, window, key, *args):
+    def __init__(self, **kwargs ):
+        super(Menu,self).__init__(**kwargs)
+        Window.bind(on_keyboard=self.Android_back_click)
+
+    def Android_back_click(self,window,key,*largs):
         if key == 27:
-            # Do whatever you need to do, like check if there are any
-            # screens that you can go back to.
-            # return True if you don't want to close app
-            # return False if you do
-            key.bind('Menu')
-            return True
-        return False
-    
-
+            print('BackBtn==True')
+            print('4', self.manager)
+            self.manager.current = 'Menu'
+            return False
+        else:
+            return False
 
 class PandaApp(App):
+    
 
     def load_json(self):
         with open('assets/main.json', encoding='utf-8') as json_data:
@@ -318,23 +327,6 @@ class PandaApp(App):
             root.ids['Sushi'].ids['sushi_container'].add_widget(wid)
 
         return root
-
-    def post_build_init(self, *args):
-        def __init__(self, **kwargs):
-            super(PandaApp, self).__init__(**kwargs)
-            # Setting it up to listen for keyboard events
-            Window.bind(on_keyboard=self.onBackBtn)
-
-    def onBackBtn(self, window, key, *args):
-        if key == 27:
-            # Do whatever you need to do, like check if there are any
-            # screens that you can go back to.
-            # return True if you don't want to close app
-            # return False if you do
-            key.bind('Menu')
-            return True
-        return False
-
 
 if __name__ == '__main__':
     PandaApp().run()
