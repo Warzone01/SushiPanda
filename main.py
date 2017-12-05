@@ -134,7 +134,7 @@ chicago_text = '''
 chicago_roll_label = ''
 
 
-class Sushi(Screen, ScrollView):
+class Sushi(Screen):
     pass
 
 class MyLabel(Label):
@@ -251,7 +251,7 @@ class PandaApp(App):
 
         self.icon = 'Images/panda.png'
         root = PandaManager(transition=NoTransition())
-
+# прорисовка меню
         main_menu = self.main_data['main_menu']
         for i in range(1, len(main_menu)):
             wid = Builder.template('PictButton', **{
@@ -260,7 +260,7 @@ class PandaApp(App):
             })
 
             root.ids['Menu'].ids['main_screen_container'].add_widget(wid)
-
+# прорисовка списка товаров
         sushi = self.main_data['second_level']['Sushi']
 
         for i in range(1, len(sushi)):
@@ -282,10 +282,9 @@ class PandaApp(App):
 
     def hook_keyboard(self, window, key, *largs):
         if key == 27:
-            print(self.root.current)
             if self.root.current == 'Menu':
-                App.get_running_app().stop()
-            elif self.root.current == 'CicagoRoll':
+                return False
+            elif self.root.current == 'Chicago_Roll':
                 self.root.current = 'Sushi'
             else:
                 self.root.current = 'Menu'
