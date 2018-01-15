@@ -55,6 +55,10 @@
         "14": {
             "img": "Images/Menu/Thakuski.png",
             "lnk": "Sushi"
+        },
+        "15": {
+            "img": "Images/Menu/Sales.png",
+            "lnk": "Sushi"
         }
     },
     "second_level": {

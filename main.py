@@ -17,7 +17,6 @@ from os.path import join
 
 
 Window.clearcolor = (1, 1, 1, 1)
-# Window.size = (720, 1280)
 
 Builder.load_string('''
 #:kivy 1.10
@@ -26,6 +25,7 @@ Builder.load_string('''
 ''')
 
 sushi_buttons = ''
+
 cart_head = '''
 <Cart>:
     name: 'Cart'
@@ -56,7 +56,6 @@ cart_label = '''
                     text: 'Ваша корзина пуста'
                     color: (0, 0, 0, 0.5)
                     font_size: 30
-
 '''
 
 cart_shop = ''
@@ -80,6 +79,7 @@ chicago_roll_head = '''
                     icon: 'ico.png'
                     on_release: root.manager.current = 'Cart'
 '''
+
 chicago_roll_info = '''
         BoxLayout:
             cols: 1
@@ -89,10 +89,12 @@ chicago_roll_info = '''
             spacing: 3
             padding: 3
 '''
+
 chicago_button = '''
             Image:
                 source: 'Images/Sushi/CicagoRoll.png'
 '''
+
 chicago_summ = '''
         RelativeLayout:
             pos: self.parent.pos
@@ -122,8 +124,8 @@ chicago_summ = '''
                     id: cartbutton
                     text: "Добавить в корзину"
                     pos_hint: {'center_x': 0, 'center_y': 0.5}
-
 '''
+
 chicago_text = '''
         ScrollView:
             BoxLayout:
@@ -131,6 +133,7 @@ chicago_text = '''
                 size_hint_y: None
                 height: 300
 '''
+
 chicago_roll_label = ''
 
 
@@ -253,7 +256,7 @@ class PandaApp(App):
         root = PandaManager(transition=NoTransition())
 # прорисовка меню
         main_menu = self.main_data['main_menu']
-        for i in range(1, len(main_menu)):
+        for i in range(1, len(main_menu)+1):
             wid = Builder.template('PictButton', **{
                 'img': main_menu[str(i)]['img'],
                 'link': main_menu[str(i)]['lnk'],
@@ -263,7 +266,7 @@ class PandaApp(App):
 # прорисовка списка товаров
         sushi = self.main_data['second_level']['Sushi']
 
-        for i in range(1, len(sushi)):
+        for i in range(1, len(sushi)+1):
             wid = Builder.template('PictButtonMenu', **{
                 'img': sushi[str(i)]['img'],
                 'txt': sushi[str(i)]['txt'],
