@@ -14,6 +14,8 @@ import json
 from kivy.uix.label import Label
 from kivy.storage.jsonstore import JsonStore
 from os.path import join
+from kivy.uix.behaviors import ButtonBehavior  
+from kivy.uix.image import Image  
 
 
 Window.clearcolor = (1, 1, 1, 1)
@@ -22,7 +24,18 @@ Builder.load_string('''
 #:kivy 1.10
 #:import SmartTile kivymd.grid.SmartTile
 #:import MDBottomNavigationItem kivymd.tabs.MDBottomNavigationItem
+#:import SwapTransition kivy.uix.screenmanager.SwapTransition
 ''')
+
+Builder.load_string('''
+<ScreenStart>:
+    name: 'ScreenStart'
+    ImageButton:
+        source: 'Images/startscreen.png'
+        on_release:
+            root.manager.transition = SwapTransition()
+            root.manager.current = 'Menu'
+    ''')
 
 sushi_buttons = ''
 
@@ -37,10 +50,11 @@ cart_head = '''
             ActionView:
                 use_sperator: True
                 ActionPrevious: 
-                    app_icon: 'Images/panda.png'
-                    title: 'Caffe Panda'
+                    app_icon: 'Images/txt.png'
                     with_previous: True
-                    on_release: root.manager.current = 'Menu'
+                    on_release:
+                        
+                        root.manager.current = 'Menu'
                 ActionOverflow:
                 ActionButton:
                     icon: 'ico.png'
@@ -70,14 +84,15 @@ chicago_roll_head = '''
             ActionView:
                 use_sperator: True
                 ActionPrevious:
-                    app_icon: 'Images/panda.png'
-                    title: 'Caffe Panda'
+                    app_icon: 'Images/txt.png'
                     with_previous: True
-                    on_release: root.manager.current = 'Sushi'
+                    on_release:
+                        root.manager.current = 'Sushi'
                 ActionOverflow:
                 ActionButton:
                     icon: 'ico.png'
-                    on_release: root.manager.current = 'Cart'
+                    on_release:
+                        root.manager.current = 'Cart'
 '''
 
 chicago_roll_info = '''
@@ -230,8 +245,15 @@ class PandaManager(ScreenManager):
 class Menu(Screen):
     pass
 
+class ImageButton(ButtonBehavior, Image):
+    # root = PandaManager(transition=NoTransition())
+    def on_press(self):
+        pass
+
+class ScreenStart(Screen):
+    pass
+
 class PandaApp(App):
-    
 
     def load_json(self):
         with open('assets/main.json', encoding='utf-8') as json_data:

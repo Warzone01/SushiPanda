@@ -10,13 +10,14 @@
                 ActionView:
                     use_sperator: True
                     ActionPrevious:
-                        app_icon: 'Images/panda.png'
-                        title: 'Caffe Panda'
+                        app_icon: 'Images/txt.png'
                         with_previous: False
                     ActionOverflow:
                     ActionButton:
                         icon: 'ico.png'
-                        on_release: root.manager.current = 'Cart'
+                        on_release: 
+                            root.manager.current = 'Cart'
+                            root.manager.transition = None
             ScrollView:
                 GridLayout:
                     cols: 1

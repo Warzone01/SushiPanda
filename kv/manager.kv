@@ -2,27 +2,32 @@
 
 <PandaManager>:
     id: screen_manager
+    screen_start: ScreenStart
     screen_menu: Menu
     screen_sushi: Sushi
     screen_cart: Cart
     screen_chicago_roll: Chicago_Roll
+    ScreenStart:
+        id: ScreenStart
+        name: 'ScreenStart'
+        manager1: screen_manager
 
     Menu:
         id: Menu
         name: 'Menu'
-        manager1: screen_manager
+        manager2: screen_manager
 
     Sushi:
         id: Sushi
         name: 'Sushi'
-        manager2: screen_manager
+        manager3: screen_manager
 
     Cart:
         id: Cart
         name: 'Cart'
-        manager3: screen_manager
+        manager4: screen_manager
 
     Chicago_Roll:
         id: Chicago_Roll
         name: 'Chicago_Roll'
-        manager4: screen_manager
+        manager5: screen_manager

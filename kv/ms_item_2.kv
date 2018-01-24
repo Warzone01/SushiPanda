@@ -4,4 +4,6 @@
 	box_color: (1, 1, 1, 0.5)
 	source: ctx.img
 	text: ctx.txt + ctx.price + 'руб'
-	on_release: app.root.current = ctx.lnk
+	on_release: 
+		app.root.current = ctx.lnk
+		
