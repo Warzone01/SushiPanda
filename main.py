@@ -52,9 +52,7 @@ cart_head = '''
                 ActionPrevious: 
                     app_icon: 'Images/txt.png'
                     with_previous: True
-                    on_release:
-                        
-                        root.manager.current = 'Menu'
+                    on_release: root.manager.current = 'Menu'
                 ActionOverflow:
                 ActionButton:
                     icon: 'ico.png'
@@ -73,7 +71,7 @@ cart_label = '''
 '''
 
 cart_shop = ''
-chicago_roll_head = '''
+chicagoroll = '''
 <Chicago_Roll>:
     name: 'Chicago_Roll'
     BoxLayout:
@@ -86,71 +84,71 @@ chicago_roll_head = '''
                 ActionPrevious:
                     app_icon: 'Images/txt.png'
                     with_previous: True
-                    on_release:
-                        root.manager.current = 'Sushi'
+                    on_release: root.manager.current = 'Sushi'
                 ActionOverflow:
                 ActionButton:
                     icon: 'ico.png'
-                    on_release:
-                        root.manager.current = 'Cart'
-'''
-
-chicago_roll_info = '''
-        BoxLayout:
-            cols: 1
-            orientation: 'vertical' 
-            size_hint_x: 1
-            size_hint_y: 3
-            spacing: 3
-            padding: 3
-'''
-
-chicago_button = '''
-            Image:
-                source: 'Images/Sushi/CicagoRoll.png'
-'''
-
-chicago_summ = '''
-        RelativeLayout:
-            pos: self.parent.pos
-            size: self.parent.size
-            BoxLayout:
-                size_hint_y: 1
-                size_hint_x: 1
-                spacing: 3
-                padding: 3
-                MDIconButton:
-                    pos_hint:{"center_x":0,"center_y":0.5}
-                    id: minus
-                    icon: 'minus'
-                    on_release: root.minus()
-                MyLabel:
-                    id: lb1
-                    pos_hint: {'center_x': 0, 'center_y': 0.5}
-                    text: "Кол-во: {}".format(self.value)
-                    color: 0, 0, 0, 0.5
-                    font_size: 30
-                MDIconButton:
-                    pos_hint:{"center_x":0,"center_y":0.5}
-                    id: plus
-                    icon: 'plus'
-                    on_release: root.fc()
-                MDFlatButton:
-                    id: cartbutton
-                    text: "Добавить в корзину"
-                    pos_hint: {'center_x': 0, 'center_y': 0.5}
-'''
-
-chicago_text = '''
+                    on_release: root.manager.current = 'Cart'
         ScrollView:
-            BoxLayout:
-                orientation: 'vertical'
+            GridLayout:
+                cols: 1
+                size: self.size
                 size_hint_y: None
-                height: 300
+                row_default_height: (self.width - self.cols*self.spacing[0])/1
+                row_force_default: False
+                height: self.minimum_height
+                padding: 3
+                spacing: 3
+                Label:
+                    text: 'Чикаго ролл'
+                    color: (0, 0, 0, 0.5)
+                    font_size: 50
+                Image:
+                    allow_stretch: True
+                    size_hint_y: 3
+                    size_hint_x: 3
+                    source: 'Images/Sushi/CicagoRoll.png'
+                RelativeLayout:
+                    pos: self.parent.pos
+                    size: self.parent.size
+                    BoxLayout:
+                        size_hint_y: 1
+                        size_hint_x: 1
+                        spacing: 3
+                        padding: 3
+                        MDIconButton:
+                            pos_hint:{"center_x":0,"center_y":0.5}
+                            id: minus
+                            icon: 'minus'
+                            on_release: root.minus()
+                        MyLabel:
+                            id: lb1
+                            pos_hint: {'center_x': 0, 'center_y': 0.5}
+                            text: "Кол-во: {}".format(self.value)
+                            color: 0, 0, 0, 0.5
+                            font_size: 30
+                        MDIconButton:
+                            pos_hint:{"center_x":0,"center_y":0.5}
+                            id: plus
+                            icon: 'plus'
+                            on_release: root.fc()
+                        MDFlatButton:
+                            id: cartbutton
+                            text: "Добавить в корзину"
+                            pos_hint: {'center_x': 0, 'center_y': 0.5}
+
+                BoxLayout:
+                    orientation: 'vertical'
+                    size_hint_y: 1
+                    size_hint_x: 1
+                    spacing: 3
+                    padding: 3
+                    Label:
+                        text: 'Чикаго ролл\\n oijfgre\\n kirill \\n programmer Чикаго ролл\\n oijfgre\\n kirill \\n programmer '
+                        color: (0, 0, 0, 0.5)
+                        font_size: 30
+                            
 '''
-
-chicago_roll_label = ''
-
 
 class Sushi(Screen):
     pass
@@ -158,7 +156,7 @@ class Sushi(Screen):
 class MyLabel(Label):
     value = NumericProperty(1)
  
-class Chicago_Roll(ScrollView, Screen):
+class Chicago_Roll(Screen):
 
     def fc(self):
         if self.ids.lb1.value < 10:
@@ -166,66 +164,9 @@ class Chicago_Roll(ScrollView, Screen):
     def minus(self):
         if self.ids.lb1.value > 1: 
             self.ids.lb1.value -= 1
-        
-    chicago_roll_label = ''
-    list_chicago = [
-        {
-            'txt': 'Чикаго ролл',
-            'size': 35,
-            'col': (0, 0, 0, 0.5),
-            'font': 'Roboto'
-        },
-        {
-            'txt': '260 руб.',
-            'size': 30,
-            'col': (0, 0, 0, 0.5),
-            'font': 'Roboto'
-        },
-        {
-            'txt': 'бекон,',
-            'size': 20,
-            'col': (0, 0, 0, 0.5),
-            'font': 'Roboto'
-        },
-        {
-            'txt': 'лосось жаренный,',
-            'size': 20,
-            'col': (0, 0, 0, 0.5),
-            'font': 'Roboto'
-        },
-        {
-            'txt': 'сливочный сыр,',
-            'size': 20,
-            'col': (0, 0, 0, 0.5),
-            'font': 'Roboto'
-        },
-        {
-            'txt': 'огурец.',
-            'size': 20,
-            'col': (0, 0, 0, 0.5),
-            'font': 'Roboto'
-        },
-        {
-            'txt': '8шт./290гр.',
-            'size': 20,
-            'col': (0, 0, 0, 0.5),
-            'font': 'Roboto'
-        },
-    ]
-    templ = '''
-                Label:
-                    text: '{}'
-                    font_size: {}
-                    color: {}
-                    font_name: '{}'
-    '''
-    for i in range(len(list_chicago)):
-        chicago_roll_label += templ.format(list_chicago[i]['txt'],
-                                           list_chicago[i]['size'],
-                                           list_chicago[i]['col'],
-                                           list_chicago[i]['font'])
-    cr = chicago_roll_head + chicago_roll_info + chicago_button + chicago_summ + chicago_text + chicago_roll_label
-    Chicago_Roll = Builder.load_string(cr)
+    cr = chicagoroll
+    Roll = Builder.load_string(cr)  
+
     
 class Cart(ScrollView, Screen):
 
@@ -246,7 +187,7 @@ class Menu(Screen):
     pass
 
 class ImageButton(ButtonBehavior, Image):
-    # root = PandaManager(transition=NoTransition())
+
     def on_press(self):
         pass
 

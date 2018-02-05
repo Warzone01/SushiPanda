@@ -163,7 +163,7 @@ android.ndk_path = ../../crystax-ndk-10.3.2/
 # (list) Android additionnal libraries to copy into libs/armeabi
 android.add_libs_armeabi = libs/android/*.so
 android.add_libs_armeabi_v7a = libs/android-v7/*.so
-android.add_libs_x86 = libs/android-x86/*.so
+#android.add_libs_x86 = libs/android-x86/*.so
 #android.add_libs_mips = libs/android-mips/*.so
 
 # (bool) Indicate whether the screen should stay on
@@ -184,7 +184,7 @@ android.add_libs_x86 = libs/android-x86/*.so
 android.copy_libs = 1
 
 # (str) The Android arch to build for, choices: armeabi-v7a, arm64-v8a, x86
-android.arch = x86
+android.arch = armeabi-v7a
 
 #
 # Python for android (p4a) specific
