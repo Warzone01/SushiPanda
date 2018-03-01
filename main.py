@@ -67,7 +67,7 @@ cart_label = '''
                 Label:
                     text: 'Ваша корзина пуста'
                     color: (0, 0, 0, 0.5)
-                    font_size: 30
+                    font_size: 100
 '''
 
 cart_shop = ''
@@ -94,28 +94,20 @@ chicagoroll = '''
                 cols: 1
                 size: self.size
                 size_hint_y: None
-                row_default_height: (self.width - self.cols*self.spacing[0])/1
+                row_default_height: (self.width  - self.cols*self.spacing[0])/1.5
                 row_force_default: False
                 height: self.minimum_height
                 padding: 3
                 spacing: 3
-                Label:
-                    text: 'Чикаго ролл'
-                    color: (0, 0, 0, 0.5)
-                    font_size: 50
                 Image:
-                    allow_stretch: True
-                    size_hint_y: 3
-                    size_hint_x: 3
+                    allow_stretch: False
                     source: 'Images/Sushi/CicagoRoll.png'
                 RelativeLayout:
-                    pos: self.parent.pos
-                    size: self.parent.size
+                    padding: 3
+                    spacing: 3
+                    orientation: 'vertical'
+                    
                     BoxLayout:
-                        size_hint_y: 1
-                        size_hint_x: 1
-                        spacing: 3
-                        padding: 3
                         MDIconButton:
                             pos_hint:{"center_x":0,"center_y":0.5}
                             id: minus
@@ -126,7 +118,7 @@ chicagoroll = '''
                             pos_hint: {'center_x': 0, 'center_y': 0.5}
                             text: "Кол-во: {}".format(self.value)
                             color: 0, 0, 0, 0.5
-                            font_size: 30
+                            font_size: 80
                         MDIconButton:
                             pos_hint:{"center_x":0,"center_y":0.5}
                             id: plus
@@ -139,14 +131,14 @@ chicagoroll = '''
 
                 BoxLayout:
                     orientation: 'vertical'
-                    size_hint_y: 1
-                    size_hint_x: 1
-                    spacing: 3
-                    padding: 3
+                    spacing: 1
+                    padding: 1
                     Label:
+                        halign: 'center'
+                        valing: 'middle'
                         text: 'Чикаго ролл\\n oijfgre\\n kirill \\n programmer Чикаго ролл\\n oijfgre\\n kirill \\n programmer '
                         color: (0, 0, 0, 0.5)
-                        font_size: 30
+                        font_size: 100
                             
 '''
 
