@@ -93,7 +93,7 @@ chicagoroll = '''
                 cols: 1
                 size: self.size
                 size_hint_y: None
-                row_default_height: (self.width  - self.cols*self.spacing[0])/2 
+                row_default_height: (self.width - self.cols*self.spacing[0]) / 2 
                 row_force_default: False
                 height: self.minimum_height
                 padding: 3
@@ -128,6 +128,7 @@ chicagoroll = '''
                             id: cartbutton
                             text: "Добавить в корзину"
                             pos_hint: {'center_x': 0, 'center_y': 0.5}
+                            on_release: add_to_cart()
 
                 BoxLayout:
                     orientation: 'vertical'
@@ -142,17 +143,24 @@ chicagoroll = '''
                             
 '''
 
+def add_to_cart():
+    print('ura')
+
+
 class Sushi(Screen):
     pass
 
+
 class MyLabel(Label):
     value = NumericProperty(1)
- 
+
+
 class Chicago_Roll(Screen):
 
     def fc(self):
         if self.ids.lb1.value < 10:
             self.ids.lb1.value += 1
+
     def minus(self):
         if self.ids.lb1.value > 1: 
             self.ids.lb1.value -= 1
@@ -175,6 +183,7 @@ class Cart(ScrollView, Screen):
 class RealCart(object):
     def add_to_cart(self, obj):
         pass
+
     def remove_from_cart(self, obj):
         pass
         
