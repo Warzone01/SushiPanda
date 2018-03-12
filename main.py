@@ -33,7 +33,6 @@ Builder.load_string('''
     ImageButton:
         source: 'Images/startscreen.png'
         on_release:
-            root.manager.transition = SwapTransition()
             root.manager.current = 'Menu'
     ''')
 
@@ -94,13 +93,12 @@ chicagoroll = '''
                 cols: 1
                 size: self.size
                 size_hint_y: None
-                row_default_height: (self.width  - self.cols*self.spacing[0])/1.5
+                row_default_height: (self.width  - self.cols*self.spacing[0])/2 
                 row_force_default: False
                 height: self.minimum_height
                 padding: 3
                 spacing: 3
                 Image:
-                    allow_stretch: False
                     source: 'Images/Sushi/CicagoRoll.png'
                 RelativeLayout:
                     padding: 3
@@ -108,17 +106,19 @@ chicagoroll = '''
                     orientation: 'vertical'
                     
                     BoxLayout:
+                        padding: 3
+                        spacing: 3
                         MDIconButton:
                             pos_hint:{"center_x":0,"center_y":0.5}
                             id: minus
                             icon: 'minus'
-                            on_release: root.minus()
+                            on_release: root.minus()                 
                         MyLabel:
                             id: lb1
                             pos_hint: {'center_x': 0, 'center_y': 0.5}
-                            text: "Кол-во: {}".format(self.value)
+                            text: "  Кол-во: {}  ".format(self.value)
                             color: 0, 0, 0, 0.5
-                            font_size: 80
+                            font_size: '8pt'
                         MDIconButton:
                             pos_hint:{"center_x":0,"center_y":0.5}
                             id: plus
@@ -138,7 +138,7 @@ chicagoroll = '''
                         valing: 'middle'
                         text: 'Чикаго ролл\\n oijfgre\\n kirill \\n programmer Чикаго ролл\\n oijfgre\\n kirill \\n programmer '
                         color: (0, 0, 0, 0.5)
-                        font_size: 100
+                        font_size: '12pt'
                             
 '''
 
@@ -159,18 +159,25 @@ class Chicago_Roll(Screen):
     cr = chicagoroll
     Roll = Builder.load_string(cr)  
 
-    
+
 class Cart(ScrollView, Screen):
 
-    cart_shop = '[]'
-    if cart_shop == '[]':
-        cart_shop = cart_label
-    # else:
-    #     for i in range(len(cart)):
-    #         cart_shop += cart.format(cart)
-    cart = cart_head + cart_buttons_head + cart_shop
+    cart_shop = {}
+    # if cart_shop == '[]':
+    #     cart_shop = cart_label
+    # # else:
+    # #     for i in range(len(cart)):
+    # #         cart_shop += cart.format(cart)
+    cart = cart_head
     Cart = Builder.load_string(cart)
 
+
+class RealCart(object):
+    def add_to_cart(self, obj):
+        pass
+    def remove_from_cart(self, obj):
+        pass
+        
 
 class PandaManager(ScreenManager):
     pass
