@@ -31,6 +31,7 @@ Builder.load_string('''
 <ScreenStart>:
     name: 'ScreenStart'
     ImageButton:
+        allow_stretch: True
         source: 'Images/startscreen.png'
         on_release:
             root.manager.current = 'Menu'
@@ -128,7 +129,7 @@ chicagoroll = '''
                             id: cartbutton
                             text: "Добавить в корзину"
                             pos_hint: {'center_x': 0, 'center_y': 0.5}
-                            on_release: add_to_cart()
+                            on_release: root.add_to_cart()
 
                 BoxLayout:
                     orientation: 'vertical'
@@ -143,8 +144,6 @@ chicagoroll = '''
                             
 '''
 
-def add_to_cart():
-    print('ura')
 
 
 class Sushi(Screen):
@@ -156,6 +155,8 @@ class MyLabel(Label):
 
 
 class Chicago_Roll(Screen):
+    def add_to_cart(self):
+        print(self.__dict__)
 
     def fc(self):
         if self.ids.lb1.value < 10:
