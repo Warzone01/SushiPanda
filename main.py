@@ -157,6 +157,7 @@ class MyLabel(Label):
 class Chicago_Roll(Screen):
     def add_to_cart(self):
         print(self.__dict__)
+        print('Работает')
 
     def fc(self):
         if self.ids.lb1.value < 10:
@@ -237,7 +238,6 @@ class PandaApp(App):
             root.ids['Menu'].ids['main_screen_container'].add_widget(wid)
 # прорисовка списка товаров
         sushi = self.main_data['second_level']['Sushi']
-
         for i in range(1, len(sushi)+1):
             wid = Builder.template('PictButtonMenu', **{
                 'img': sushi[str(i)]['img'],
