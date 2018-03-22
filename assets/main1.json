@@ -218,8 +218,27 @@
                 "txt": "Венеция ролл",
                 "price": " 260",
                 "lnk": "Chicago_Roll"
-                }
-            }
+            },
+        "Candies":
+            "1":{
+                "img": "Images/Candies/cake.png",
+                "txt": "Чизкейк",
+                "price": " 150",
+                "lnk": "Cake"
+            },
+            "2":{
+                "img": "Images/Candies/minari.png",
+                "txt": "Минари",
+                "price": " 260",
+                "lnk": "Minari"
+            },
+            "3":{
+                "img": "Images/Candies/tartaletka.png",
+                "txt": "Тарталетка с малиной",
+                "price": " 120",
+                "lnk": "Tartaletka"
+            },
+
         }
     }
 }
