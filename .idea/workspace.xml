@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="14677fd6-bb0f-42bf-b755-8c3578a50d44" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Menu/aktsii-i-skidki.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/main.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/main.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/main1.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/main1.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +18,7 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1547">
+            <state relative-caret-position="2618">
               <caret line="239" column="55" selection-start-line="239" selection-start-column="55" selection-end-line="239" selection-end-column="55" />
             </state>
           </provider>
@@ -33,20 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/main.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="217" column="27" lean-forward="true" selection-start-line="217" selection-start-column="27" selection-end-line="217" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main1.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/main1.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="229" column="43" selection-start-line="229" selection-start-column="43" selection-end-line="229" selection-end-column="43" />
+            <state relative-caret-position="543">
+              <caret line="240" column="8" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -305,22 +296,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
+        <state relative-caret-position="2618">
           <caret line="239" column="55" selection-start-line="239" selection-start-column="55" selection-end-line="239" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/main.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="217" column="27" lean-forward="true" selection-start-line="217" selection-start-column="27" selection-end-line="217" selection-end-column="27" />
+        <state relative-caret-position="221">
+          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/main1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="229" column="43" selection-start-line="229" selection-start-column="43" selection-end-line="229" selection-end-column="43" />
+        <state relative-caret-position="543">
+          <caret line="240" column="8" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="8" />
         </state>
       </provider>
     </entry>
