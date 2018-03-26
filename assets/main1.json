@@ -252,6 +252,156 @@
           "price": " 100",
           "lnk": "Free"
         }
+      },
+      "Hosomaki": {
+        "1": {
+          "img": "Images/Hosomaki/abbimaki.png",
+          "txt": "Эби маки",
+          "price": " 140",
+          "lnk": "Abbimaki"
+        },
+        "2": {
+          "img": "Images/Hosomaki/kappamaki.png",
+          "txt": "Каппа маки",
+          "price": " 80",
+          "lnk": "Kappamaki"
+        },
+        "3": {
+          "img": "Images/Hosomaki/sakemaki.png",
+          "txt": "Саке маки",
+          "price": " 150",
+          "lnk": "Sakemaki"
+        }
+      },
+      "Hot": {
+        "1": {
+          "img": "Images/Hot/grecha_lapsha_govyadina.png",
+          "txt": "Гречневая лапша с говядиной",
+          "price": " 300",
+          "lnk": "Grecha_lapsha_govyadina"
+        },
+        "2": {
+          "img": "Images/Hot/grecha_lapsha_kuritsa.png",
+          "txt": "Гречневая лапша с курицей",
+          "price": " 250",
+          "lnk": "Grecha_lapsha_kuritsa"
+        },
+        "3": {
+          "img": "Images/Hot/gudon.png",
+          "txt": "Гюдон",
+          "price": " 270",
+          "lnk": "Gudon"
+        },
+        "4": {
+          "img": "Images/Hot/oyakodon.png",
+          "txt": "Оякодон",
+          "price": " 240",
+          "lnk": "Oyakodon"
+        },
+        "5": {
+          "img": "Images/Hot/spaisi_tori.png",
+          "txt": "Спайси тори",
+          "price": " 270",
+          "lnk": "Spaisi_tori"
+        },
+        "6": {
+          "img": "Images/Hot/tepanyaki_kuritsa.png",
+          "txt": "Тепаньяки с курицей",
+          "price": " 250",
+          "lnk": "Tepanyaki_kuritsa"
+        },
+        "7": {
+          "img": "Images/Hot/tepanyaki_ovoshi.png",
+          "txt": "Тепаньяки с овощами",
+          "price": " 220",
+          "lnk": "Tepanyaki_ovoshi"
+        },
+        "8": {
+          "img": "Images/Hot/tepanyaki_more.png",
+          "txt": "Тепаньяки с морепродуктами",
+          "price": " 370",
+          "lnk": "Tepanyaki_more"
+        },
+        "9": {
+          "img": "Images/Hot/tori_teriyaki.png",
+          "txt": "Тори терияки",
+          "price": " 270",
+          "lnk": "Tori_teriyaki"
+        },
+        "10": {
+          "img": "Images/Hot/udon_govyadina.png",
+          "txt": "Удон с говядиной",
+          "price": " 270",
+          "lnk": "Udon_govyadina"
+        },
+        "11": {
+          "img": "Images/Hot/udon_kuritsa.png",
+          "txt": "Удон с курицей",
+          "price": " 240",
+          "lnk": "Udon_kuritsa"
+        },
+        "12": {
+          "img": "Images/Hot/udon_more.png",
+          "txt": "Удон с морепродуктами",
+          "price": " 300",
+          "lnk": "Udon_more"
+        },
+        "13": {
+          "img": "Images/Hot/udon_ovoshi.png",
+          "txt": "Удон с овощами",
+          "price": " 200",
+          "lnk": "Udon_ovoshi"
+        }
+      },
+      "Nigiri": {
+        "1": {
+          "img": "Images/Nigiri/abi_nigiri.png",
+          "txt": "Эби нигири",
+          "price": " 80",
+          "lnk": "Abi_nigiri"
+        },
+        "2": {
+          "img": "Images/Nigiri/chukka_nigiri.png",
+          "txt": "Чукка нигири",
+          "price": " 40",
+          "lnk": "Chukka_nigiri"
+        },
+        "3": {
+          "img": "Images/Nigiri/filadeilfia_ikura_nigiri.png",
+          "txt": "Филадельфия икура нигири",
+          "price": " 90",
+          "lnk": "Filadelfia_ikura_nigiri"
+        },
+        "4": {
+          "img": "Images/Nigiri/sake_gurme_nigiri.png",
+          "txt": "Саке гурме нигири",
+          "price": " 70",
+          "lnk": "Sake_gurme_nigiri"
+        },
+        "5": {
+          "img": "Images/Nigiri/sake_nigiri.png",
+          "txt": "Саке нигири",
+          "price": " 60",
+          "lnk": "Sake_nigiri"
+        },
+        "6": {
+          "img": "Images/Nigiri/spaisi_nigiri.png",
+          "txt": "Спайси нигири",
+          "price": " 70",
+          "lnk": "spaisi_nigiri"
+        },
+        "7": {
+          "img": "Images/Nigiri/unagi_nigiri.png",
+          "txt": "Унаги нигири",
+          "price": " 80",
+          "lnk": "Unagi_nigiri"
+        },
+        "8": {
+          "img": "Images/Nigiri/yaki_spaisi_nigiri.png",
+          "txt": "Яки спайси нигири",
+          "price": " 80",
+          "lnk": "Yaki_spaisi_nigiri"
+        }
       }
     }
   }
