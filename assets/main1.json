@@ -402,6 +402,394 @@
           "price": " 80",
           "lnk": "Yaki_spaisi_nigiri"
         }
+      },
+      "Packs": {
+        "1": {
+          "img": "Images/Packs/n1.png",
+          "txt": "Сэт №1",
+          "price": " 690",
+          "lnk": "N1"
+        },
+        "2": {
+          "img": "Images/Packs/n2.png",
+          "txt": "Сэт №2",
+          "price": " 790",
+          "lnk": "N2"
+        },
+        "3": {
+          "img": "Images/Packs/n3.png",
+          "txt": "Сэт №3",
+          "price": " 1190",
+          "lnk": "N3"
+        },
+        "4": {
+          "img": "Images/Packs/n4.png",
+          "txt": "Сэт №4",
+          "price": " 2290",
+          "lnk": "N4"
+        },
+        "5": {
+          "img": "Images/Packs/n5.png",
+          "txt": "Сэт №5",
+          "price": " 2900",
+          "lnk": "N5"
+        },
+        "6": {
+          "img": "Images/Packs/n6.png",
+          "txt": "Сэт №6",
+          "price": " 999",
+          "lnk": "N6"
+        }
+      },
+      "Pasta": {
+        "1": {
+          "img": "Images/Pasta/karbonara.png",
+          "txt": "Карбонара",
+          "price": " 250",
+          "lnk": "Karbonara"
+        },
+        "2": {
+          "img": "Images/Pasta/more_monto.png",
+          "txt": "Море Монто",
+          "price": " 350",
+          "lnk": "More_monto"
+        },
+        "3": {
+          "img": "Images/Pasta/pasta_salmone.png",
+          "txt": "Паста Сальмоне",
+          "price": " 490",
+          "lnk": "pasta_salmone"
+        }
+      },
+      "Pizza": {
+        "1": {
+          "img": "Images/Pizza/kaprichioza.png",
+          "txt": "Пицца Капричиоза",
+          "price": " 540",
+          "lnk": "Kaprichioza"
+        },
+        "2": {
+          "img": "Images/Pizza/konpola.png",
+          "txt": "Пицца Кон Полла",
+          "price": " 460",
+          "lnk": "Konpola"
+        },
+        "3": {
+          "img": "Images/Pizza/krestyanskaya.png",
+          "txt": "Пицца Крестьянская",
+          "price": " 390",
+          "lnk": "Krestyanskaya"
+        },
+        "4": {
+          "img": "Images/Pizza/kurinaya.png",
+          "txt": "Пицца Куриная",
+          "price": " 450",
+          "lnk": "Kurinaya"
+        },
+        "5": {
+          "img": "Images/Pizza/margarita.png",
+          "txt": "Пицца Маргарита",
+          "price": " 350",
+          "lnk": "Margarita"
+        },
+        "6": {
+          "img": "Images/Pizza/marinari.png",
+          "txt": "Пицца Маринари",
+          "price": " 590",
+          "lnk": "marinari"
+        },
+        "7": {
+          "img": "Images/Pizza/myasnaya.png",
+          "txt": "Мясная пицца",
+          "price": " 550",
+          "lnk": "Tepanyaki_ovoshi"
+        },
+        "8": {
+          "img": "Images/Pizza/nemetskaya.png",
+          "txt": "Немецкая",
+          "price": " 500",
+          "lnk": "Nemetskaya"
+        },
+        "9": {
+          "img": "Images/Pizza/ohotnichya.png",
+          "txt": "Охотничья пицца",
+          "price": " 460",
+          "lnk": "Ohotnichya"
+        },
+        "10": {
+          "img": "Images/Pizza/pepperoni.png",
+          "txt": "Пепперони",
+          "price": " 510",
+          "lnk": "Pepperoni"
+        },
+        "11": {
+          "img": "Images/Pizza/pizza_4_sira.png",
+          "txt": "Пицца 4 сыра",
+          "price": " 490",
+          "lnk": "Pizza_4_sira"
+        },
+        "12": {
+          "img": "Images/Pizza/salyami.png",
+          "txt": "Пицца Салями",
+          "price": " 510",
+          "lnk": "Salyami"
+        },
+        "13": {
+          "img": "Images/Pizza/slavyanskaya.png",
+          "txt": "Пицца Славянская",
+          "price": " 450",
+          "lnk": "Slavyanskaya"
+        },
+        "14": {
+          "img": "Images/Pizza/tunetc.png",
+          "txt": "Пицца с тунцом",
+          "price": " 520",
+          "lnk": "Tunetc"
+        }
+      },
+      "Roll": {
+        "1": {
+          "img": "Images/Roll/tai_tempura_maki.png",
+          "txt": "Тай темпура маки",
+          "price": " 280",
+          "lnk": "Tai_tempura_maki"
+        },
+        "2": {
+          "img": "Images/Roll/tokio_maki.png",
+          "txt": "Токио маки",
+          "price": " 330",
+          "lnk": "Tokio_maki"
+        }
+      },
+      "Salades": {
+        "1": {
+          "img": "Images/Salades/chukka_salat.png",
+          "txt": "Чукка салат",
+          "price": " 240",
+          "lnk": "Chukka_salat"
+        },
+        "2": {
+          "img": "Images/Salades/salat_kalmar.png",
+          "txt": "Острый салат из кальмара",
+          "price": " 280",
+          "lnk": "Salat_kalmar"
+        },
+        "3": {
+          "img": "Images/Salades/tori_butaniku.png",
+          "txt": "Тори бутанику",
+          "price": " 280",
+          "lnk": "Tori_butaniku"
+        },
+        "4": {
+          "img": "Images/Salades/tsezar_kuritsa.png",
+          "txt": "Цезарь с курицей",
+          "price": " 280",
+          "lnk": "Tsezar_kuritsa"
+        }
+      },
+      "Soups": {
+        "1": {
+          "img": "Images/Soups/kimchi_nabe.png",
+          "txt": "Кимчи набе",
+          "price": " 230",
+          "lnk": "Kimchi_nabe"
+        },
+        "2": {
+          "img": "Images/Soups/kimchi_soup.png",
+          "txt": "Кимчи суп",
+          "price": " 120",
+          "lnk": "Kimchi_soup"
+        },
+        "3": {
+          "img": "Images/Soups/krem_gribnoi.png",
+          "txt": "Крем-суп грибной",
+          "price": " 170",
+          "lnk": "Krem_soup"
+        },
+        "4": {
+          "img": "Images/Soups/miso_soup.png",
+          "txt": "Мисо суп",
+          "price": " 100",
+          "lnk": "Miso_soup"
+        },
+        "5": {
+          "img": "Images/Soups/udon_s_kuritsei.png",
+          "txt": "Удон с курицей",
+          "price": " 140",
+          "lnk": "Udon_s_kuritsei"
+        }
+      },
+      "Thakuski": {
+        "1": {
+          "img": "Images/Thakuski/abbi_tempura.png",
+          "txt": "Эби темпура",
+          "price": " 320",
+          "lnk": "Abbi_tempura"
+        },
+        "2": {
+          "img": "Images/Thakuski/kalmar_v_klyare.png",
+          "txt": "Кольца кольмара в кляре",
+          "price": " 250",
+          "lnk": "Kalmar_v_klyare"
+        },
+        "3": {
+          "img": "Images/Thakuski/naggetsi.png",
+          "txt": "Наггетсы 6шт",
+          "price": " 110",
+          "lnk": "Naggetsi"
+        },
+        "4": {
+          "img": "Images/Thakuski/yaki_spaisi_igo.png",
+          "txt": "Яки спайси иго",
+          "price": " 320",
+          "lnk": "Yaki_spaisi_igo"
+        },
+        "5": {
+          "img": "Images/Thakuski/niku_tempura.png",
+          "txt": "Нику темпура",
+          "price": " 240",
+          "lnk": "Niku_tempura"
+        },
+        "6": {
+          "img": "Images/Thakuski/shaverma.png",
+          "txt": "Шаверма",
+          "price": " 230",
+          "lnk": "Shaverma"
+        }
+      },
+      "Zapechennie": {
+        "1": {
+          "img": "Images/Zapechennie/CicagoRoll.png",
+          "txt": "Чикаго Ролл",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "2": {
+          "img": "Images/Zapechennie/LavaSLososem.png",
+          "txt": "Лава с лососем",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "3": {
+          "img": "Images/Zapechennie/LavaSKrabom.png",
+          "txt": "Лава с крабом",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "4": {
+          "img": "Images/Zapechennie/LavaSKrevetkoi.png",
+          "txt": "Лава с криветкой",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "5": {
+          "img": "Images/Zapechennie/LavaSUgrem.png",
+          "txt": "Лава с угрём",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "6": {
+          "img": "Images/Zapechennie/RollOvosh.png",
+          "txt": "Ролл в темпурной крошке(Овощной)",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "7": {
+          "img": "Images/Zapechennie/RollLosos.png",
+          "txt": "Ролл в темпурной крошке с лососем",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "8": {
+          "img": "Images/Zapechennie/RollChicken.png",
+          "txt": "Ролл в темпурной крошке с курой",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "9": {
+          "img": "Images/Zapechennie/HanMaki.png",
+          "txt": "Хан маки",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "10": {
+          "img": "Images/Zapechennie/PhiladelphiaDELUX.png",
+          "txt": "Филадельфия де люкс",
+          "price": "260",
+          "lnk": "Chicago_Roll"
+        },
+        "11": {
+          "img": "Images/Zapechennie/FreshRoll.png",
+          "txt": "Фреш ролл",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "12": {
+          "img": "Images/Zapechennie/SamuraiMaki.png",
+          "txt": "Самурай маки",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "13": {
+          "img": "Images/Zapechennie/SakuraMaki.png",
+          "txt": "Сакура маки",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "14": {
+          "img": "Images/Zapechennie/PandaMaki.png",
+          "txt": "Панда маки",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "15": {
+          "img": "Images/Zapechennie/MunhenRoll.png",
+          "txt": "Мюнхен ролл",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "16": {
+          "img": "Images/Zapechennie/MonteKarlo.png",
+          "txt": "Монте карло",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "17": {
+          "img": "Images/Zapechennie/MaiamiMaki.png",
+          "txt": "Майами маки",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "18": {
+          "img": "Images/Zapechennie/LeonaRoll.png",
+          "txt": "Леона ролл",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "19": {
+          "img": "Images/Zapechennie/LiteRoll.png",
+          "txt": "Лайт ролл",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "20": {
+          "img": "Images/Zapechennie/KanadskiiRoyalo.png",
+          "txt": "Канадский тобияко роял",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "21": {
+          "img": "Images/Zapechennie/KanadaSKrevetkoi.png",
+          "txt": "Канада с креветкой",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        },
+        "22": {
+          "img": "Images/Zapechennie/CaliforniaMaki.png",
+          "txt": "Калифорния маки",
+          "price": " 260",
+          "lnk": "Chicago_Roll"
+        }
       }
     }
   }
