@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14677fd6-bb0f-42bf-b755-8c3578a50d44" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Pizza/4sira.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/main1.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/main1.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +37,8 @@
       <file leaf-file-name="main1.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/main1.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1002">
-              <caret line="787" column="36" selection-start-line="787" selection-start-column="36" selection-end-line="787" selection-end-column="36" />
+            <state relative-caret-position="373">
+              <caret line="789" column="23" selection-start-line="789" selection-start-column="23" selection-end-line="789" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -360,8 +358,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/main1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1002">
-          <caret line="787" column="36" selection-start-line="787" selection-start-column="36" selection-end-line="787" selection-end-column="36" />
+        <state relative-caret-position="373">
+          <caret line="789" column="23" selection-start-line="789" selection-start-column="23" selection-end-line="789" selection-end-column="23" />
         </state>
       </provider>
     </entry>

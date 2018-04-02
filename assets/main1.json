@@ -659,136 +659,136 @@
       },
       "Zapechennie": {
         "1": {
-          "img": "Images/Zapechennie/CicagoRoll.png",
-          "txt": "Чикаго Ролл",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/abbi_roll.png",
+          "txt": "Эби ролл",
+          "price": " 250",
+          "lnk": "Abbi_roll"
         },
         "2": {
-          "img": "Images/Zapechennie/LavaSLososem.png",
-          "txt": "Лава с лососем",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/africa_maki.png",
+          "txt": "Африка маки",
+          "price": " 290",
+          "lnk": "Africa_maki"
         },
         "3": {
-          "img": "Images/Zapechennie/LavaSKrabom.png",
-          "txt": "Лава с крабом",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/bangkok_roll.png",
+          "txt": "Бангкок ролл",
+          "price": " 290",
+          "lnk": "Bangkok_roll"
         },
         "4": {
-          "img": "Images/Zapechennie/LavaSKrevetkoi.png",
-          "txt": "Лава с криветкой",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/chiken_roll.png",
+          "txt": "Чикен ролл",
+          "price": " 220",
+          "lnk": "Chiken_Roll"
         },
         "5": {
-          "img": "Images/Zapechennie/LavaSUgrem.png",
-          "txt": "Лава с угрём",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/drim_roll.png",
+          "txt": "Дрим ролл",
+          "price": " 310",
+          "lnk": "Drim_roll"
         },
         "6": {
-          "img": "Images/Zapechennie/RollOvosh.png",
-          "txt": "Ролл в темпурной крошке(Овощной)",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/filadelfiya_royal.png",
+          "txt": "Филадельфия роял",
+          "price": " 340",
+          "lnk": "Filadelfiya_royal"
         },
         "7": {
-          "img": "Images/Zapechennie/RollLosos.png",
-          "txt": "Ролл в темпурной крошке с лососем",
+          "img": "Images/Zapechennie/florida_roll.png",
+          "txt": "Флорида ролл",
           "price": " 260",
-          "lnk": "Chicago_Roll"
+          "lnk": "Florida_roll"
         },
         "8": {
-          "img": "Images/Zapechennie/RollChicken.png",
-          "txt": "Ролл в темпурной крошке с курой",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/kalifornia_de_lux.png",
+          "txt": "Калифорния де люкс",
+          "price": " 280",
+          "lnk": "Kalifornia_de_lux"
         },
         "9": {
-          "img": "Images/Zapechennie/HanMaki.png",
-          "txt": "Хан маки",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/king_roll.png",
+          "txt": "Кинг ролл",
+          "price": " 290",
+          "lnk": "King_roll"
         },
         "10": {
-          "img": "Images/Zapechennie/PhiladelphiaDELUX.png",
-          "txt": "Филадельфия де люкс",
-          "price": "260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/pacha_roll.png",
+          "txt": "Пача ролл",
+          "price": " 280",
+          "lnk": "Pacha_roll"
         },
         "11": {
-          "img": "Images/Zapechennie/FreshRoll.png",
-          "txt": "Фреш ролл",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/sirnii_roll_krab.png",
+          "txt": "Сырный ролл с крабом",
+          "price": " 220",
+          "lnk": "Sirnii_roll_krab"
         },
         "12": {
-          "img": "Images/Zapechennie/SamuraiMaki.png",
-          "txt": "Самурай маки",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/sirnii_roll_krevetka.png",
+          "txt": "Сырный ролл с криветкой",
+          "price": " 250",
+          "lnk": "Sirnii_roll_krevetka"
         },
         "13": {
-          "img": "Images/Zapechennie/SakuraMaki.png",
-          "txt": "Сакура маки",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/skandi_roll.png",
+          "txt": "Сканди ролл",
+          "price": " 330",
+          "lnk": "Skandi_roll"
         },
         "14": {
-          "img": "Images/Zapechennie/PandaMaki.png",
-          "txt": "Панда маки",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/slivochnaya_sushi_pizza.png",
+          "txt": "Сливочная суши-пицца",
+          "price": " 250",
+          "lnk": "Slivochnaya_sushi_pizza"
         },
         "15": {
-          "img": "Images/Zapechennie/MunhenRoll.png",
-          "txt": "Мюнхен ролл",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/spaisi_kani_maki.png",
+          "txt": "Спайси кани маки",
+          "price": " 240",
+          "lnk": "Spaisi_kani_maki"
         },
         "16": {
-          "img": "Images/Zapechennie/MonteKarlo.png",
-          "txt": "Монте карло",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/stark_roll.png",
+          "txt": "Старк ролл",
+          "price": " 290",
+          "lnk": "Stark_roll"
         },
         "17": {
-          "img": "Images/Zapechennie/MaiamiMaki.png",
-          "txt": "Майами маки",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/sushi_pizza_kuritsa_becon.png",
+          "txt": "Суши-пицца с курицей и беконом",
+          "price": " 280",
+          "lnk": "Sushi_pizza_kuritsa_becon"
         },
         "18": {
-          "img": "Images/Zapechennie/LeonaRoll.png",
-          "txt": "Леона ролл",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/sushi_pizza_n1.png",
+          "txt": "Суши-пицца №1",
+          "price": " 310",
+          "lnk": "Sushi_pizza_n1"
         },
         "19": {
-          "img": "Images/Zapechennie/LiteRoll.png",
-          "txt": "Лайт ролл",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/yaki_ika_maki.png",
+          "txt": "Яки ика маки",
+          "price": " 290",
+          "lnk": "Yaki_ika_maki"
         },
         "20": {
-          "img": "Images/Zapechennie/KanadskiiRoyalo.png",
-          "txt": "Канадский тобияко роял",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/yaki_kaiesi_maki.png",
+          "txt": "Яки кайеси маки",
+          "price": " 240",
+          "lnk": "Yaki_kaiesi_maki"
         },
         "21": {
-          "img": "Images/Zapechennie/KanadaSKrevetkoi.png",
-          "txt": "Канада с креветкой",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/yaki_midzumi_maki.png",
+          "txt": "Яки мидзуми маки",
+          "price": " 290",
+          "lnk": "Yaki_midzumi_maki"
         },
         "22": {
-          "img": "Images/Zapechennie/CaliforniaMaki.png",
-          "txt": "Калифорния маки",
-          "price": " 260",
-          "lnk": "Chicago_Roll"
+          "img": "Images/Zapechennie/yaki_unagi_maki.png",
+          "txt": "Яки унаги маки",
+          "price": " 320",
+          "lnk": "yaki_unagi_maki"
         }
       }
     }
